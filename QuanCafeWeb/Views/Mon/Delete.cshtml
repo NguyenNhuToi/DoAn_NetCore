@@ -1,0 +1,26 @@
+@model QuanCafeWeb.Models.Mon
+@{ ViewData["Title"] = "Xóa món"; }
+
+<h2>🗑️ Xóa món</h2>
+<h4 class="text-danger">Bạn có chắc muốn xóa món này?</h4>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Tên món</dt>
+            <dd class="col-sm-9">@Model.TenMon</dd>
+
+            <dt class="col-sm-3">Danh mục</dt>
+            <dd class="col-sm-9">@Model.DanhMucMon?.TenDM</dd>
+
+            <dt class="col-sm-3">Giá bán</dt>
+            <dd class="col-sm-9">@Model.GiaBan.ToString("N0") VNĐ</dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-3">
+    <input type="hidden" asp-for="MaMon" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

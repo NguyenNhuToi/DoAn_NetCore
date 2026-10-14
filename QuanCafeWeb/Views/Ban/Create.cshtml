@@ -1,0 +1,36 @@
+@model QuanCafeWeb.Models.Ban
+@{ ViewData["Title"] = "Thêm bàn"; }
+
+<h2>➕ Thêm bàn mới</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="TenBan" class="form-label"></label>
+        <input asp-for="TenBan" class="form-control" />
+        <span asp-validation-for="TenBan" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="KhuVuc" class="form-label"></label>
+        <input asp-for="KhuVuc" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SoGhe" class="form-label"></label>
+        <input asp-for="SoGhe" class="form-control" type="number" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TrangThai" class="form-label"></label>
+        <input asp-for="TrangThai" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

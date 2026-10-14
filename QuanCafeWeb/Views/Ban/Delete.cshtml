@@ -1,0 +1,32 @@
+@model QuanCafeWeb.Models.Ban
+@{ ViewData["Title"] = "Xóa bàn"; }
+
+<h2>🗑️ Xóa bàn</h2>
+<h4 class="text-danger">Bạn có chắc muốn xóa bàn này?</h4>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Tên bàn</dt>
+            <dd class="col-sm-9">@Model.TenBan</dd>
+
+            <dt class="col-sm-3">Khu vực</dt>
+            <dd class="col-sm-9">@Model.KhuVuc</dd>
+
+            <dt class="col-sm-3">Số ghế</dt>
+            <dd class="col-sm-9">@(Model.SoGhe?.ToString() ?? "—")</dd>
+
+            <dt class="col-sm-3">Trạng thái</dt>
+            <dd class="col-sm-9">@Model.TrangThai</dd>
+
+            <dt class="col-sm-3">Số order</dt>
+            <dd class="col-sm-9">@(Model.Orders?.Count ?? 0)</dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-3">
+    <input type="hidden" asp-for="MaBan" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

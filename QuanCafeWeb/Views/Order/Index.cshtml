@@ -1,0 +1,45 @@
+@model IEnumerable<QuanCafeWeb.Models.Order>
+@{
+    ViewData["Title"] = "Danh sách order";
+}
+
+<h2>🧾 Danh sách order</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="mb-3">
+    <a asp-action="TaoOrder" class="btn btn-success">➕ Tạo order</a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã order</th>
+            <th>Bàn</th>
+            <th>Loại</th>
+            <th>Giờ vào</th>
+            <th>Giờ ra</th>
+            <th>Tổng tiền</th>
+            <th width="120">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaOrder</td>
+                <td>@item.Ban?.TenBan</td>
+                <td>@item.LoaiOrder</td>
+                <td>@item.GioVao.ToString("g")</td>
+                <td>@(item.GioRa.HasValue ? item.GioRa.Value.ToString("g") : "-")</td>
+                <td>@item.TongTien.ToString("N0") VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.MaOrder" class="btn btn-primary btn-sm">Chi tiết</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,68 @@
+@model List<QuanCafeWeb.ViewModels.CartItem>
+@{
+    ViewData["Title"] = "Tạo Order";
+    var bans = ViewBag.Bans as List<QuanCafeWeb.Models.Ban> ?? new();
+}
+
+<h2>🛒 Tạo Order</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <h5>Chọn món</h5>
+        <div class="row">
+            @foreach (var mon in ViewBag.Mons as List<QuanCafeWeb.Models.Mon>)
+            {
+                <div class="col-md-4 mb-2">
+                    <div class="card">
+                        <div class="card-body p-2 text-center">
+                            <h6>@mon.TenMon</h6>
+                            <p class="text-danger">@mon.GiaBan.ToString("N0")đ</p>
+                            <button class="btn btn-sm btn-success btn-them" data-id="@mon.MaMon">Thêm</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <h5>🛒 Giỏ hàng</h5>
+        <table class="table table-sm">
+            <thead><tr><th>Món</th><th>SL</th><th>Tiền</th><th></th></tr></thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.TenMon</td>
+                        <td>@item.SoLuong</td>
+                        <td>@item.ThanhTien.ToString("N0")</td>
+                        <td><a asp-action="RemoveFromCart" asp-route-maMon="@item.MaMon" class="text-danger">✕</a></td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr><th colspan="2">Tổng:</th><th colspan="2">@Model.Sum(c => c.ThanhTien).ToString("N0")đ</th></tr>
+            </tfoot>
+        </table>
+
+        @if (Model.Count > 0)
+        {
+            <a asp-action="Checkout" class="btn btn-primary w-100">✅ Thanh toán</a>
+            <a asp-action="ClearCart" class="btn btn-outline-danger w-100 mt-2">🗑️ Xóa giỏ</a>
+        }
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.querySelectorAll('.btn-them').forEach(btn => {
+        btn.onclick = () => {
+            fetch('/Order/AddToCart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'maMon=' + btn.dataset.id + '&soLuong=1'
+            }).then(() => location.reload());
+        };
+    });
+</script>
+}

@@ -1,0 +1,107 @@
+@model X.PagedList.IPagedList<QuanCafeWeb.Models.Mon>
+@using X.PagedList.Mvc.Core
+@{ ViewData["Title"] = "Danh sách món"; }
+
+<h2>☕ Danh sách món</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<!-- ===== FORM LỌC ===== -->
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+    <div class="col-md-2">
+        <input type="text" name="searchString" value="@ViewBag.SearchString"
+               class="form-control" placeholder="Tên món..." />
+    </div>
+    <div class="col-md-2">
+        <select name="maDM" class="form-select" asp-items="ViewBag.MaDM">
+            <option value="">-- Tất cả danh mục --</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <input type="number" name="giaMin" value="@ViewBag.GiaMin"
+               class="form-control" placeholder="Giá từ..." />
+    </div>
+    <div class="col-md-2">
+        <input type="number" name="giaMax" value="@ViewBag.GiaMax"
+               class="form-control" placeholder="Đến giá..." />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">🔍 Lọc</button>
+        <a asp-action="Index" class="btn btn-secondary">↺ Reset</a>
+        <a asp-action="Create" class="btn btn-success">➕ Thêm món</a>
+    </div>
+</form>
+
+<!-- ===== BẢNG DANH SÁCH ===== -->
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewBag.SortTenAsc"
+                   asp-route-searchString="@ViewBag.SearchString"
+                   asp-route-maDM="@ViewBag.CurrentMaDM"
+                   asp-route-giaMin="@ViewBag.GiaMin"
+                   asp-route-giaMax="@ViewBag.GiaMax"
+                   class="text-white text-decoration-none">
+                    Tên món ↕
+                </a>
+            </th>
+            <th>Danh mục</th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewBag.SortGiaAsc"
+                   asp-route-searchString="@ViewBag.SearchString"
+                   asp-route-maDM="@ViewBag.CurrentMaDM"
+                   asp-route-giaMin="@ViewBag.GiaMin"
+                   asp-route-giaMax="@ViewBag.GiaMax"
+                   class="text-white text-decoration-none">
+                    Giá bán ↕
+                </a>
+            </th>
+            <th>Ảnh</th>
+            <th>Trạng thái</th>
+            <th width="150">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TenMon</td>
+                <td>@item.DanhMucMon?.TenDM</td>
+                <td>@item.GiaBan.ToString("N0") VNĐ</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.AnhMoi))
+                    {
+                        <img src="~/images/@item.AnhMoi" width="70" height="70" style="object-fit:cover" />
+                    }
+                </td>
+                <td>
+                    @if (item.TrangThai) { <span class="badge bg-success">Còn bán</span> }
+                    else { <span class="badge bg-danger">Hết</span> }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaMon" class="btn btn-warning btn-sm">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@item.MaMon" class="btn btn-danger btn-sm">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- ===== PHÂN TRANG ===== -->
+<div class="d-flex justify-content-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new
+    {
+        page,
+        searchString = ViewBag.SearchString,
+        maDM = ViewBag.CurrentMaDM,
+        giaMin = ViewBag.GiaMin,
+        giaMax = ViewBag.GiaMax,
+        sortOrder = ViewBag.CurrentSort
+    }))
+</div>

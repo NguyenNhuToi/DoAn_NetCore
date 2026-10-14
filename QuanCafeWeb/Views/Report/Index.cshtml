@@ -1,0 +1,126 @@
+@{
+    ViewData["Title"] = "Báo cáo doanh thu";
+}
+
+<h2>📊 Báo cáo doanh thu</h2>
+
+<!-- ===== 3 THẺ THỐNG KÊ TỔNG QUAN ===== -->
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-success shadow">
+            <div class="card-body">
+                <h6>💰 Doanh thu hôm nay</h6>
+                <h3>@(((decimal)ViewBag.DoanhThuHomNay).ToString("N0")) đ</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-primary shadow">
+            <div class="card-body">
+                <h6>📅 Doanh thu tháng này</h6>
+                <h3>@(((decimal)ViewBag.DoanhThuThang).ToString("N0")) đ</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info shadow">
+            <div class="card-body">
+                <h6>🧾 Tổng số đơn hàng</h6>
+                <h3>@ViewBag.TongDonHang đơn</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== BIỂU ĐỒ DOANH THU 7 NGÀY ===== -->
+<div class="card shadow mb-4">
+    <div class="card-header bg-dark text-white">
+        <h5 class="mb-0">📈 Doanh thu 7 ngày gần nhất</h5>
+    </div>
+    <div class="card-body">
+        <canvas id="chartDoanhThu" height="100"></canvas>
+    </div>
+</div>
+
+<!-- ===== BIỂU ĐỒ TOP 5 MÓN BÁN CHẠY ===== -->
+<div class="card shadow">
+    <div class="card-header bg-warning text-dark">
+        <h5 class="mb-0">🏆 Top 5 món bán chạy</h5>
+    </div>
+    <div class="card-body">
+        <canvas id="chartTopMon" height="100"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // ===== 1. Biểu đồ doanh thu 7 ngày =====
+        var labelsDoanhThu = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Labels));
+        var dataDoanhThu = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Data));
+
+        new Chart(document.getElementById('chartDoanhThu'), {
+            type: 'line',
+            data: {
+                labels: labelsDoanhThu,
+                datasets: [{
+                    label: 'Doanh thu (VNĐ)',
+                    data: dataDoanhThu,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // ===== 2. Biểu đồ Top 5 món =====
+        var labelsTopMon = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopMonLabels));
+        var dataTopMon = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopMonData));
+
+        new Chart(document.getElementById('chartTopMon'), {
+            type: 'bar',
+            data: {
+                labels: labelsTopMon,
+                datasets: [{
+                    label: 'Số lượng đã bán',
+                    data: dataTopMon,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+}

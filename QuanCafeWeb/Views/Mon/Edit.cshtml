@@ -1,0 +1,52 @@
+@model QuanCafeWeb.Models.Mon
+@{ ViewData["Title"] = "Sửa món"; }
+
+<h2>✏️ Sửa món</h2>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MaMon" />
+    <input type="hidden" asp-for="AnhMoi" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="TenMon" class="form-label"></label>
+        <input asp-for="TenMon" class="form-control" />
+        <span asp-validation-for="TenMon" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MaDM" class="form-label"></label>
+        <select asp-for="MaDM" class="form-select" asp-items="ViewBag.MaDM"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GiaBan" class="form-label"></label>
+        <input asp-for="GiaBan" class="form-control" type="number" step="1000" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MoTa" class="form-label"></label>
+        <textarea asp-for="MoTa" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ảnh mới (nếu muốn đổi)</label>
+        <input type="file" name="fileAnh" class="form-control" accept="image/*" />
+        @if (!string.IsNullOrEmpty(Model.AnhMoi))
+        {
+            <img src="~/images/@Model.AnhMoi" width="100" class="mt-2" />
+        }
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="TrangThai" class="form-check-input" />
+        <label asp-for="TrangThai" class="form-check-label"></label>
+    </div>
+
+    <button type="submit" class="btn btn-warning">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

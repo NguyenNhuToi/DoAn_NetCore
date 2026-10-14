@@ -1,0 +1,66 @@
+@model QuanCafeWeb.Models.Order
+@{
+    ViewData["Title"] = "Chi tiết order";
+}
+
+<h2>🧾 Chi tiết order</h2>
+
+<div class="mb-3">
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.MaOrder)</dt>
+        <dd class="col-sm-10">@Model.MaOrder</dd>
+
+        <dt class="col-sm-2">Bàn</dt>
+        <dd class="col-sm-10">@Model.Ban?.TenBan ?? "-"</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.LoaiOrder)</dt>
+        <dd class="col-sm-10">@Model.LoaiOrder</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.GioVao)</dt>
+        <dd class="col-sm-10">@Model.GioVao.ToString("g")</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.GioRa)</dt>
+        <dd class="col-sm-10">@(Model.GioRa.HasValue ? Model.GioRa.Value.ToString("g") : "-")</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.TongTien)</dt>
+        <dd class="col-sm-10">@Model.TongTien.ToString("N0") VNĐ</dd>
+    </dl>
+</div>
+
+@if (Model.ChiTietOrders != null && Model.ChiTietOrders.Any())
+{
+    <h4>Chi tiết món</h4>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Món</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var it in Model.ChiTietOrders)
+            {
+                <tr>
+                    <td>@it.Mon?.TenMon</td>
+                    <td>@it.SoLuong</td>
+                    <td>@it.DonGia.ToString("N0") VNĐ</td>
+                    <td>@(it.SoLuong * it.DonGia).ToString("N0") VNĐ</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">TỔNG</th>
+                <th>@Model.TongTien.ToString("N0") VNĐ</th>
+            </tr>
+        </tfoot>
+    </table>
+}
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.MaOrder" class="btn btn-warning">✏️ Sửa</a>
+    <a asp-action="Delete" asp-route-id="@Model.MaOrder" class="btn btn-danger">🗑️ Xóa</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</p>

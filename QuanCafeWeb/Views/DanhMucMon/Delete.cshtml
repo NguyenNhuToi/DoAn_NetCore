@@ -1,0 +1,26 @@
+@model QuanCafeWeb.Models.DanhMucMon
+@{ ViewData["Title"] = "Xóa danh mục"; }
+
+<h2>🗑️ Xóa danh mục</h2>
+<h4 class="text-danger">Bạn có chắc muốn xóa danh mục này?</h4>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Tên danh mục</dt>
+            <dd class="col-sm-9">@Model.TenDM</dd>
+
+            <dt class="col-sm-3">Thứ tự</dt>
+            <dd class="col-sm-9">@Model.ThuTu</dd>
+
+            <dt class="col-sm-3">Số món</dt>
+            <dd class="col-sm-9">@(Model.Mons?.Count ?? 0)</dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-3">
+    <input type="hidden" asp-for="MaDM" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
