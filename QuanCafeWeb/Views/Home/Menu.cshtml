@@ -1,0 +1,90 @@
+﻿@model List<QuanCafeWeb.Models.Mon>
+@{
+    ViewData["Title"] = "Thực đơn";
+    var danhMucs = ViewBag.DanhMucs as List<QuanCafeWeb.Models.DanhMucMon> ?? new();
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-5">☕ Thực đơn Quán Cà Phê</h1>
+    <p class="text-muted">Chọn món yêu thích của bạn!</p>
+</div>
+
+<!-- Ô tìm kiếm -->
+<div class="row justify-content-center mb-3">
+    <div class="col-md-5">
+        <form asp-action="Menu" method="get" class="input-group">
+            <input type="text" name="searchString" value="@ViewBag.SearchString"
+                   class="form-control" placeholder="Tìm món..." />
+            <button type="submit" class="btn btn-primary">🔍 Tìm</button>
+        </form>
+    </div>
+</div>
+
+<!-- Nút lọc theo danh mục -->
+<div class="text-center mb-4">
+    <a asp-action="Menu" class="btn btn-sm @(ViewBag.CurrentMaDM == null ? "btn-primary" : "btn-outline-primary") m-1">
+        Tất cả
+    </a>
+    @foreach (var dm in danhMucs)
+    {
+        <a asp-action="Menu" asp-route-maDM="@dm.MaDM"
+           class="btn btn-sm @(ViewBag.CurrentMaDM == dm.MaDM ? "btn-primary" : "btn-outline-primary") m-1">
+            @dm.TenDM
+        </a>
+    }
+</div>
+
+<!-- Danh sách món -->
+<div class="row">
+    @if (!Model.Any())
+    {
+        <div class="col-12 text-center text-muted py-5">
+            <h4>😢 Chưa có món nào trong thực đơn</h4>
+        </div>
+    }
+    else
+    {
+        @foreach (var mon in Model)
+        {
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    @if (!string.IsNullOrEmpty(mon.AnhMoi))
+                    {
+                        <img src="~/images/@mon.AnhMoi" class="card-img-top"
+                             style="height:200px;object-fit:cover" />
+                    }
+                    else
+                    {
+                        <div class="bg-light d-flex align-items-center justify-content-center"
+                             style="height:200px;">
+                            <span style="font-size:4rem;">☕</span>
+                        </div>
+                    }
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@mon.TenMon</h5>
+                        <p class="text-muted small mb-1">📂 @mon.DanhMucMon?.TenDM</p>
+                        @if (!string.IsNullOrEmpty(mon.MoTa))
+                        {
+                            <p class="text-muted small">@mon.MoTa</p>
+                        }
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-danger fw-bold fs-5">@mon.GiaBan.ToString("N0") đ</span>
+                            </div>
+                            <div class="d-grid gap-1">
+                                <a asp-controller="DanhGia" asp-action="XemDanhGia" asp-route-maMon="@mon.MaMon"
+                                   class="btn btn-sm btn-outline-warning">
+                                    ⭐ Xem đánh giá
+                                </a>
+                                <a asp-controller="DanhGia" asp-action="Create" asp-route-maMon="@mon.MaMon"
+                                   class="btn btn-sm btn-warning">
+                                    ✍️ Đánh giá món này
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

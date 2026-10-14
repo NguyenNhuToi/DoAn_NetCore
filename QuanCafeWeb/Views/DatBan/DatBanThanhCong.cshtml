@@ -1,0 +1,33 @@
+﻿@model QuanCafeWeb.Models.DatBan
+@{ ViewData["Title"] = "Đặt bàn thành công"; }
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow border-success">
+            <div class="card-body text-center">
+                <div style="font-size:4rem;">✅</div>
+                <h3 class="text-success">Đặt bàn thành công!</h3>
+                <p class="text-muted">Chúng tôi sẽ liên hệ xác nhận trong thời gian sớm nhất.</p>
+
+                <hr />
+
+                <div class="text-start">
+                    <p><b>Mã đặt bàn:</b> #@Model.MaDatBan</p>
+                    <p><b>Khách hàng:</b> @Model.HoTen - @Model.SoDienThoai</p>
+                    <p><b>Bàn:</b> @Model.Ban?.TenBan</p>
+                    <p><b>Ngày giờ:</b> @Model.NgayDat.ToString("dd/MM/yyyy") lúc @Model.GioDat.ToString(@"hh\:mm")</p>
+                    <p><b>Số người:</b> @Model.SoNguoi</p>
+                    @if (!string.IsNullOrEmpty(Model.GhiChu))
+                    {
+                        <p><b>Ghi chú:</b> @Model.GhiChu</p>
+                    }
+                    <p><b>Trạng thái:</b> <span class="badge bg-warning text-dark">@Model.TrangThai</span></p>
+                </div>
+
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary mt-3">
+                    🏠 Về trang chủ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

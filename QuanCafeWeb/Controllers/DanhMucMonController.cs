@@ -1,40 +1,55 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuanCafeWeb.Data;
+using QuanCafeWeb.Filters;
 using QuanCafeWeb.Models;
 using X.PagedList;
 using X.PagedList.Extensions;
 
 namespace QuanCafeWeb.Controllers
 {
+    [AuthorizeRole("QuanTri")]  // ⭐ CHỈ QUẢN TRỊ MỚI VÀO ĐƯỢC
     public class DanhMucMonController : Controller
     {
         private readonly QuanCafeContext _context;
         public DanhMucMonController(QuanCafeContext context) => _context = context;
 
-        // GET: /DanhMucMon
-        public async Task<IActionResult> Index(string? searchString, int? page)
+        // ===== DANH SÁCH + TÌM KIẾM + SẮP XẾP =====
+        public async Task<IActionResult> Index(string? searchString, string? sortOrder, int? page)
         {
             var query = _context.DanhMucMons.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(searchString))
                 query = query.Where(d => d.TenDM.Contains(searchString));
 
+            // ⭐ Sắp xếp
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.SortTenAsc = string.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
+            ViewBag.SortThuTuAsc = sortOrder == "thutu_asc" ? "thutu_desc" : "thutu_asc";
+
+            query = sortOrder switch
+            {
+                "ten_asc" => query.OrderBy(d => d.TenDM),
+                "ten_desc" => query.OrderByDescending(d => d.TenDM),
+                "thutu_asc" => query.OrderBy(d => d.ThuTu),
+                "thutu_desc" => query.OrderByDescending(d => d.ThuTu),
+                _ => query.OrderBy(d => d.MaDM)
+            };
+
+            ViewBag.SearchString = searchString;
+
             int pageSize = 5;
             int pageNumber = page ?? 1;
 
-            ViewBag.SearchString = searchString;
-            var list = await query.OrderBy(d => d.MaDM).ToListAsync();
+            var list = await query.ToListAsync();
             var paged = list.ToPagedList(pageNumber, pageSize);
             return View(paged);
         }
 
-        // GET: /DanhMucMon/Create
+        // ===== CREATE =====
         public IActionResult Create() => View();
 
-        // POST: /DanhMucMon/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(DanhMucMon dm)
         {
             if (ModelState.IsValid)
@@ -47,7 +62,7 @@ namespace QuanCafeWeb.Controllers
             return View(dm);
         }
 
-        // GET: /DanhMucMon/Edit/5
+        // ===== EDIT =====
         public async Task<IActionResult> Edit(int id)
         {
             var dm = await _context.DanhMucMons.FindAsync(id);
@@ -55,9 +70,7 @@ namespace QuanCafeWeb.Controllers
             return View(dm);
         }
 
-        // POST: /DanhMucMon/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, DanhMucMon dm)
         {
             if (id != dm.MaDM) return NotFound();
@@ -71,7 +84,7 @@ namespace QuanCafeWeb.Controllers
             return View(dm);
         }
 
-        // GET: /DanhMucMon/Delete/5
+        // ===== DELETE =====
         public async Task<IActionResult> Delete(int id)
         {
             var dm = await _context.DanhMucMons.FindAsync(id);
@@ -79,13 +92,21 @@ namespace QuanCafeWeb.Controllers
             return View(dm);
         }
 
-        // POST: /DanhMucMon/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var dm = await _context.DanhMucMons.FindAsync(id);
-            if (dm != null) _context.DanhMucMons.Remove(dm);
+            if (dm == null) return NotFound();
+
+            // ⭐ KIỂM TRA: Còn món nào thuộc danh mục này không?
+            bool conMon = await _context.Mons.AnyAsync(m => m.MaDM == id);
+            if (conMon)
+            {
+                TempData["Error"] = "❌ Không thể xóa! Còn món thuộc danh mục này.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            _context.DanhMucMons.Remove(dm);
             await _context.SaveChangesAsync();
             TempData["Success"] = "Xóa thành công!";
             return RedirectToAction(nameof(Index));

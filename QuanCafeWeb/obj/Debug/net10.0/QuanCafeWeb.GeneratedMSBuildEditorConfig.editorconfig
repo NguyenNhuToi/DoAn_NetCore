@@ -51,6 +51,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/CaLamViec/CheckIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FMYW1WaWVjXENoZWNrSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/CaLamViec/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FMYW1WaWVjXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/CaLamViec/ThongKe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FMYW1WaWVjXFRob25nS2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DanhGia/CamOn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaEdpYVxDYW1Pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DanhGia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaEdpYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DanhGia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaEdpYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DanhGia/XemDanhGia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaEdpYVxYZW1EYW5oR2lhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DanhMucMon/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaE11Y01vblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -67,8 +95,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaE11Y01vblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DatBan/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0QmFuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DatBan/DatBanThanhCong.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0QmFuXERhdEJhblRoYW5oQ29uZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DatBan/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0QmFuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DatBan/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0QmFuXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/DatBan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0QmFuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Home/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Home/Privacy.cshtml]
@@ -91,12 +143,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/NhanVien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/NhanVien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/NhanVien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/NhanVien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Order/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Order/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Order/Index.cshtml]
@@ -113,6 +189,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Shared/_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/K24CNT1-NET/QLQuanCafe_Nhom1_K24CNT1/QuanCafeWeb/Views/Shared/_ValidationScriptsPartial.cshtml]

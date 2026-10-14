@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IOSOMPT6m7Q=",
+  "dgSpecHash": "Ossiqpj+Jcc=",
   "success": true,
   "projectFilePath": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\QuanCafeWeb.csproj",
   "expectedPackageFiles": [
@@ -55,7 +55,7 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.11\\system.configuration.configurationmanager.9.0.11.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.7.1\\system.identitymodel.tokens.jwt.7.7.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.11\\system.security.cryptography.pkcs.9.0.11.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.11\\system.security.cryptography.protecteddata.9.0.11.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\x.pagedlist\\10.6.0\\x.pagedlist.10.6.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\x.pagedlist.mvc.core\\10.6.0\\x.pagedlist.mvc.core.10.6.0.nupkg.sha512"

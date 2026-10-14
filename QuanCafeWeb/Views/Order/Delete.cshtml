@@ -1,0 +1,121 @@
+@model QuanCafeWeb.Models.Order
+@{
+    ViewData["Title"] = "Xóa hóa đơn";
+}
+
+<h2 class="mb-4 text-danger">🗑️ Xóa hóa đơn #@Model.MaOrder</h2>
+
+@if (Model.GioRa != null)
+{
+    <!-- ===== KHÔNG CHO XÓA - HÓA ĐƠN ĐÃ THANH TOÁN ===== -->
+    <div class="alert alert-danger shadow">
+        <h4>🚫 Không thể xóa!</h4>
+        <p>Hóa đơn này đã thanh toán lúc
+            <b>@Model.GioRa.Value.ToString("dd/MM/yyyy HH:mm")</b>.</p>
+        <p class="mb-0">Chỉ có thể xóa hóa đơn <b>chưa thanh toán</b>.</p>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary btn-lg">← Quay lại danh sách</a>
+}
+else
+{
+    <!-- ===== CHO PHÉP XÓA ===== -->
+    <div class="alert alert-warning shadow">
+        <h4>⚠️ Cảnh báo!</h4>
+        <p>Bạn có chắc chắn muốn xóa hóa đơn này?</p>
+        <p class="mb-0"><b>Hành động này không thể hoàn tác!</b></p>
+    </div>
+
+    <!-- THÔNG TIN HÓA ĐƠN -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <b>📋 Thông tin hóa đơn</b>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Mã hóa đơn:</dt>
+                <dd class="col-sm-9"><b>#@Model.MaOrder</b></dd>
+
+                <dt class="col-sm-3">Bàn:</dt>
+                <dd class="col-sm-9">@(Model.Ban?.TenBan ?? "Mang đi")</dd>
+
+                <dt class="col-sm-3">Loại order:</dt>
+                <dd class="col-sm-9">
+                    @if (Model.LoaiOrder == "Tại chỗ")
+                    {
+                        <span class="badge bg-primary">Tại chỗ</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">Mang đi</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-3">Giờ vào:</dt>
+                <dd class="col-sm-9">@Model.GioVao.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                <dt class="col-sm-3">Trạng thái:</dt>
+                <dd class="col-sm-9">
+                    <span class="badge bg-warning text-dark">⏳ Chưa thanh toán</span>
+                </dd>
+
+                <dt class="col-sm-3">Tổng tiền:</dt>
+                <dd class="col-sm-9 text-danger fw-bold fs-4">
+                    @Model.TongTien.ToString("N0") VNĐ
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- CHI TIẾT MÓN -->
+    <h5>☕ Chi tiết món:</h5>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Tên món</th>
+                <th class="text-center">SL</th>
+                <th class="text-end">Đơn giá</th>
+                <th class="text-end">Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.ChiTietOrders != null && Model.ChiTietOrders.Count > 0)
+            {
+                foreach (var ct in Model.ChiTietOrders)
+                {
+                    <tr>
+                        <td>@(ct.Mon?.TenMon ?? "N/A")</td>
+                        <td class="text-center">@ct.SoLuong</td>
+                        <td class="text-end">@ct.DonGia.ToString("N0")đ</td>
+                        <td class="text-end fw-bold">@((ct.SoLuong * ct.DonGia).ToString("N0"))đ</td>
+                    </tr>
+                }
+                <tr class="table-secondary">
+                    <td colspan="3" class="text-end fw-bold">TỔNG CỘNG:</td>
+                    <td class="text-end fw-bold text-danger">
+                        @Model.TongTien.ToString("N0")đ
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="text-center text-muted">Không có chi tiết</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- FORM XÁC NHẬN XÓA -->
+    <div class="mt-4">
+        <form asp-action="Delete" method="post" style="display:inline">
+            @Html.AntiForgeryToken()  @* ⭐ THÊM DÒNG NÀY *@
+            <input type="hidden" asp-for="MaOrder" />
+            <button type="submit" class="btn btn-danger btn-lg"
+                    onclick="return confirm('⚠️ XÁC NHẬN XÓA HÓA ĐƠN #@Model.MaOrder?\n\nHành động này KHÔNG THỂ hoàn tác!');">
+                🗑️ Xác nhận xóa
+            </button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary btn-lg">← Quay lại</a>
+    </div>
+}

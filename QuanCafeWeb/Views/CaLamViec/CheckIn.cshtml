@@ -1,0 +1,27 @@
+﻿@{ ViewData["Title"] = "Check-in nhân viên"; }
+
+<h2 class="mb-3">🟢 Check-in nhân viên</h2>
+
+<form asp-action="CheckIn" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Chọn nhân viên *</label>
+            <select name="maTK" class="form-select" required asp-items="ViewBag.NhanViens">
+                <option value="">-- Chọn nhân viên --</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Ghi chú (không bắt buộc)</label>
+            <textarea name="ghiChu" class="form-control" rows="2"
+                      placeholder="VD: Ca sáng, ca chiều..."></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">✅ Xác nhận Check-in</button>
+    <a asp-action="Index" class="btn btn-secondary">← Quay lại</a>
+</form>

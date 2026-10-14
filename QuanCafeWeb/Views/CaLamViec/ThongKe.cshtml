@@ -1,0 +1,39 @@
+﻿@{ ViewData["Title"] = "Thống kê giờ làm"; }
+
+<h2 class="mb-3">📊 Thống kê giờ làm việc</h2>
+
+<form asp-action="ThongKe" method="get" class="row g-2 mb-3">
+    <div class="col-md-3">
+        <label class="form-label">Từ ngày</label>
+        <input type="date" name="tuNgay" value="@ViewBag.TuNgay" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <label class="form-label">Đến ngày</label>
+        <input type="date" name="denNgay" value="@ViewBag.DenNgay" class="form-control" />
+    </div>
+    <div class="col-auto align-self-end">
+        <button class="btn btn-primary">🔍 Xem thống kê</button>
+    </div>
+</form>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nhân viên</th>
+            <th class="text-center">Số ca</th>
+            <th class="text-end">Tổng giờ làm</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><b>@item.HoTen</b></td>
+                <td class="text-center">@item.SoCa</td>
+                <td class="text-end text-success fw-bold">@item.TongGio.ToString("0.0") giờ</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">← Quay lại</a>

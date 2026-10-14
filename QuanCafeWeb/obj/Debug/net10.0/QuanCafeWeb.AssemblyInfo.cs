@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuanCafeWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+277cc75b15ded0f287554eda67df00eacdcf0989")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuanCafeWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuanCafeWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

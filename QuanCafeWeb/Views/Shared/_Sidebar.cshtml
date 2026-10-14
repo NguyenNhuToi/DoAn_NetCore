@@ -1,0 +1,105 @@
+﻿@{
+    var vaiTro = Context.Session.GetString("VaiTro") ?? "";
+    var hoTen = Context.Session.GetString("HoTen") ?? "Khách";
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+}
+
+<aside class="sidebar">
+    <div class="sidebar-brand">
+        ☕ QuanCafe
+    </div>
+
+    <ul class="sidebar-menu">
+        <!-- ===== TRANG CHỦ ===== -->
+        <li>
+            <a asp-controller="Home" asp-action="Index"
+               class="@(currentController == "Home" && currentAction == "Index" ? "active" : "")">
+                <i>🏠</i><span>Trang chủ</span>
+            </a>
+        </li>
+
+        <!-- ===== ⭐ THỰC ĐƠN (cho mọi người) ===== -->
+        <li>
+            <a asp-controller="Home" asp-action="Menu"
+               class="@(currentController == "Home" && currentAction == "Menu" ? "active" : "")">
+                <i>☕</i><span>Thực đơn</span>
+            </a>
+        </li>
+
+        <!-- ===== QUẢN LÝ (QuanTri + NhanVien) ===== -->
+        @if (vaiTro == "QuanTri" || vaiTro == "NhanVien")
+        {
+            <li class="sidebar-section">Quản lý</li>
+
+            <li>
+                <a asp-controller="DanhMucMon" asp-action="Index"
+                   class="@(currentController == "DanhMucMon" ? "active" : "")">
+                    <i>📂</i><span>Danh mục</span>
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Mon" asp-action="Index"
+                   class="@(currentController == "Mon" ? "active" : "")">
+                    <i>🍽️</i><span>Món</span>
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Ban" asp-action="Index"
+                   class="@(currentController == "Ban" ? "active" : "")">
+                    <i>🪑</i><span>Bàn</span>
+                </a>
+            </li>
+
+            <li class="sidebar-section">Nghiệp vụ</li>
+
+            <li>
+                <a asp-controller="Order" asp-action="TaoOrder"
+                   class="@(currentController == "Order" && currentAction == "TaoOrder" ? "active" : "")">
+                    <i>➕</i><span>Tạo đơn hàng</span>
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Order" asp-action="Index"
+                   class="@(currentController == "Order" && currentAction == "Index" ? "active" : "")">
+                    <i>🧾</i><span>Danh sách đơn</span>
+                </a>
+            </li>
+
+            <!-- ⭐ ĐẶT BÀN (mới thêm cho Nhân viên + Quản trị) -->
+            <li>
+                <a asp-controller="DatBan" asp-action="Index"
+                   class="@(currentController == "DatBan" ? "active" : "")">
+                    <i>📅</i><span>Đặt bàn</span>
+                </a>
+            </li>
+        }
+
+        <!-- ===== BÁO CÁO + ĐÁNH GIÁ (Chỉ QuanTri) ===== -->
+        @if (vaiTro == "QuanTri")
+        {
+            <li class="sidebar-section">Phân tích</li>
+
+            <li>
+                <a asp-controller="Report" asp-action="Index"
+                   class="@(currentController == "Report" ? "active" : "")">
+                    <i>📊</i><span>Doanh thu</span>
+                </a>
+            </li>
+            <li>
+                <a asp-controller="DanhGia" asp-action="Index"
+                   class="@(currentController == "DanhGia" ? "active" : "")">
+                    <i>⭐</i><span>Đánh giá</span>
+                </a>
+            </li>
+        }
+
+        <!-- ===== HỆ THỐNG ===== -->
+        <li class="sidebar-section">Khác</li>
+        <li>
+            <a asp-controller="Account" asp-action="Logout">
+                <i>🚪</i><span>Đăng xuất</span>
+            </a>
+        </li>
+    </ul>
+</aside>

@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanCafeWeb.Data;
+using QuanCafeWeb.Filters;
 using QuanCafeWeb.Models;
 using X.PagedList;
 using X.PagedList.Extensions;
 
 namespace QuanCafeWeb.Controllers
 {
+    [AuthorizeRole("QuanTri", "NhanVien")]
     public class MonController : Controller
     {
         private readonly QuanCafeContext _context;
@@ -19,12 +21,13 @@ namespace QuanCafeWeb.Controllers
             _env = env;
         }
 
-        // GET: /Mon?searchString=&maDM=&giaMin=&giaMax=&sortOrder=&page=
+        // GET: /Mon?searchString=&maDM=&giaMin=&giaMax=&trangThai=&sortOrder=&page=
         public async Task<IActionResult> Index(
             string? searchString,
             int? maDM,
             decimal? giaMin,
             decimal? giaMax,
+            bool? trangThai,
             string? sortOrder,
             int? page)
         {
@@ -44,11 +47,14 @@ namespace QuanCafeWeb.Controllers
             if (giaMax.HasValue)
                 query = query.Where(m => m.GiaBan <= giaMax.Value);
 
-            // ===== 4. SẮP XẾP =====
+            // ===== 4. LỌC THEO TRẠNG THÁI (CÒN BÁN / HẾT HÀNG) ⭐ =====
+            if (trangThai.HasValue)
+                query = query.Where(m => m.TrangThai == trangThai.Value);
+
+            // ===== 5. SẮP XẾP =====
             ViewBag.CurrentSort = sortOrder;
             ViewBag.SortTenAsc = string.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
             ViewBag.SortGiaAsc = sortOrder == "gia_asc" ? "gia_desc" : "gia_asc";
-            ViewBag.SortNgayAsc = sortOrder == "ngay_asc" ? "ngay_desc" : "ngay_asc";
 
             query = sortOrder switch
             {
@@ -56,19 +62,18 @@ namespace QuanCafeWeb.Controllers
                 "ten_desc" => query.OrderByDescending(m => m.TenMon),
                 "gia_asc" => query.OrderBy(m => m.GiaBan),
                 "gia_desc" => query.OrderByDescending(m => m.GiaBan),
-                "ngay_asc" => query.OrderBy(m => m.MaMon),
-                "ngay_desc" => query.OrderByDescending(m => m.MaMon),
                 _ => query.OrderBy(m => m.MaMon)
             };
 
-            // ===== 5. LƯU TRẠNG THÁI FILTER VÀO VIEWBAG =====
+            // ===== 6. LƯU TRẠNG THÁI FILTER VÀO VIEWBAG =====
             ViewBag.SearchString = searchString;
             ViewBag.MaDM = new SelectList(_context.DanhMucMons, "MaDM", "TenDM", maDM);
             ViewBag.CurrentMaDM = maDM;
             ViewBag.GiaMin = giaMin;
             ViewBag.GiaMax = giaMax;
+            ViewBag.TrangThai = trangThai;  
 
-            // ===== 6. PHÂN TRANG =====
+            // ===== 7. PHÂN TRANG =====
             int pageSize = 5;
             int pageNumber = page ?? 1;
 

@@ -3,16 +3,156 @@
   "WorkspaceRootPath": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\moncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\moncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\calamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\calamviec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\calamviec\\thongke.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\calamviec\\thongke.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\calamvieccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\calamvieccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\calamviec\\checkin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\calamviec\\checkin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\calamviec\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\calamviec\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\nhanvien\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\nhanvien\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\nhanvien\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\nhanvien\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\nhanvien\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\nhanvien\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\nhanvien\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\nhanvien\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\data\\quancafecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:data\\quancafecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\mon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\mon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\datban\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\datban\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\datban\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\datban\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\datbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\datbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\datban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\datban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\danhgia\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\danhgia\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\danhgia\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\danhgia\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\danhgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\danhgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\danhgia\\xemdanhgia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\danhgia\\xemdanhgia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\danhgia\\camon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\danhgia\\camon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\mon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\mon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\filters\\authorizeroleattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:filters\\authorizeroleattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\datban\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\datban\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\datban\\datbanthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\datban\\datbanthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\datban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\datban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\report\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,8 +163,28 @@
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\danhmucmoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\danhmucmoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\moncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\moncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\bancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\bancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\mon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\mon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -33,10 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\taoorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\taoorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\viewmodels\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +215,6 @@
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\ban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\bancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\bancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\danhmucmon\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\danhmucmon\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -79,10 +231,6 @@
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\danhmucmon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\controllers\\danhmucmoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:controllers\\danhmucmoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\mon\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\mon\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -93,10 +241,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\mon\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\mon\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -123,10 +267,6 @@
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\data\\quancafecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:data\\quancafecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\chitietorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\chitietorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -137,14 +277,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\mon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|solutionrelative:models\\mon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C55E9BE-DFE2-D91F-878E-9AE77208D81E}|QuanCafeWeb.csproj|d:\\k24cnt1-net\\qlquancafe_nhom1_k24cnt1\\quancafeweb\\models\\danhmucmon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,35 +290,552 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckIn.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\CaLamViec\\CheckIn.cshtml",
+              "RelativeDocumentMoniker": "Views\\CaLamViec\\CheckIn.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\CaLamViec\\CheckIn.cshtml",
+              "RelativeToolTip": "Views\\CaLamViec\\CheckIn.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:50:31.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\CaLamViec\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CaLamViec\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\CaLamViec\\Index.cshtml",
+              "RelativeToolTip": "Views\\CaLamViec\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:49:18.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhanVien\\Edit.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Edit.cshtml",
+              "RelativeToolTip": "Views\\NhanVien\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:46:59.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhanVien\\Delete.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Delete.cshtml",
+              "RelativeToolTip": "Views\\NhanVien\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:46:25.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhanVien\\Create.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Create.cshtml",
+              "RelativeToolTip": "Views\\NhanVien\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:46:00.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhanVien\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\NhanVien\\Index.cshtml",
+              "RelativeToolTip": "Views\\NhanVien\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:44:29.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAgwOMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T02:01:09.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CaLamViec.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\CaLamViec.cs",
+              "RelativeDocumentMoniker": "Models\\CaLamViec.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\CaLamViec.cs",
+              "RelativeToolTip": "Models\\CaLamViec.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T15:36:10.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThongKe.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\CaLamViec\\ThongKe.cshtml",
+              "RelativeDocumentMoniker": "Views\\CaLamViec\\ThongKe.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\CaLamViec\\ThongKe.cshtml",
+              "RelativeToolTip": "Views\\CaLamViec\\ThongKe.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:51:46.911Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CaLamViecController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\CaLamViecController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CaLamViecController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\CaLamViecController.cs",
+              "RelativeToolTip": "Controllers\\CaLamViecController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAswG0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T15:41:05.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NhanVienController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\NhanVienController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NhanVienController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\NhanVienController.cs",
+              "RelativeToolTip": "Controllers\\NhanVienController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T15:40:04.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "dashboard.css",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\wwwroot\\css\\dashboard.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\dashboard.css",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\wwwroot\\css\\dashboard.css",
+              "RelativeToolTip": "wwwroot\\css\\dashboard.css",
+              "ViewState": "AgIAABYBAAAAAAAAAAAgwC8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-14T08:26:21.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Details.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T02:41:14.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T02:34:12.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Edit.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Order\\Edit.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAgwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T08:49:04.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Delete.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Order\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T08:50:32.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QuanCafeContext.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Data\\QuanCafeContext.cs",
+              "RelativeDocumentMoniker": "Data\\QuanCafeContext.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Data\\QuanCafeContext.cs",
+              "RelativeToolTip": "Data\\QuanCafeContext.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwBAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T01:45:05.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T02:35:46.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\DatBan\\Details.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Details.cshtml",
+              "RelativeToolTip": "Views\\DatBan\\Details.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAABBwA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T09:57:07.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\DatBan\\Create.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Create.cshtml",
+              "RelativeToolTip": "Views\\DatBan\\Create.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAABBwE0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T09:52:10.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Ban.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Ban.cs",
+              "RelativeDocumentMoniker": "Models\\Ban.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Ban.cs",
+              "RelativeToolTip": "Models\\Ban.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T01:42:42.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DatBan.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\DatBan.cs",
+              "RelativeDocumentMoniker": "Models\\DatBan.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\DatBan.cs",
+              "RelativeToolTip": "Models\\DatBan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T09:43:47.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DatBanController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DatBanController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DatBanController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DatBanController.cs",
+              "RelativeToolTip": "Controllers\\DatBanController.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAqwM8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T09:48:12.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAgwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-14T11:30:40.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwGgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T08:27:36.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\DanhGia\\Create.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\Create.cshtml",
+              "RelativeToolTip": "Views\\DanhGia\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:35:31.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Menu.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Home\\Menu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Menu.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Home\\Menu.cshtml",
+              "RelativeToolTip": "Views\\Home\\Menu.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwFkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:04:22.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T08:21:50.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DanhGiaController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DanhGiaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DanhGiaController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DanhGiaController.cs",
+              "RelativeToolTip": "Controllers\\DanhGiaController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T10:32:43.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DanhGia\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\Index.cshtml",
+              "RelativeToolTip": "Views\\DanhGia\\Index.cshtml",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:34:24.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CamOn.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\CamOn.cshtml",
+              "RelativeDocumentMoniker": "Views\\DanhGia\\CamOn.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\CamOn.cshtml",
+              "RelativeToolTip": "Views\\DanhGia\\CamOn.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:36:08.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "XemDanhGia.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\XemDanhGia.cshtml",
+              "RelativeDocumentMoniker": "Views\\DanhGia\\XemDanhGia.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhGia\\XemDanhGia.cshtml",
+              "RelativeToolTip": "Views\\DanhGia\\XemDanhGia.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwE0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:38:07.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AuthorizeRoleAttribute.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Filters\\AuthorizeRoleAttribute.cs",
+              "RelativeDocumentMoniker": "Filters\\AuthorizeRoleAttribute.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Filters\\AuthorizeRoleAttribute.cs",
+              "RelativeToolTip": "Filters\\AuthorizeRoleAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T08:56:39.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Mon.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Mon.cs",
+              "RelativeDocumentMoniker": "Models\\Mon.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Mon.cs",
+              "RelativeToolTip": "Models\\Mon.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T01:42:23.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DanhGia.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\DanhGia.cs",
+              "RelativeDocumentMoniker": "Models\\DanhGia.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\DanhGia.cs",
+              "RelativeToolTip": "Models\\DanhGia.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T09:44:08.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\DatBan\\Delete.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Delete.cshtml",
+              "RelativeToolTip": "Views\\DatBan\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T09:59:20.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DatBanThanhCong.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\DatBanThanhCong.cshtml",
+              "RelativeDocumentMoniker": "Views\\DatBan\\DatBanThanhCong.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\DatBanThanhCong.cshtml",
+              "RelativeToolTip": "Views\\DatBan\\DatBanThanhCong.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T09:55:18.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DatBan\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DatBan\\Index.cshtml",
+              "RelativeToolTip": "Views\\DatBan\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T09:50:23.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "MonController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\MonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MonController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\MonController.cs",
+              "RelativeToolTip": "Controllers\\MonController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBcAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T02:03:10.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DanhMucMonController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DanhMucMonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DanhMucMonController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DanhMucMonController.cs",
+              "RelativeToolTip": "Controllers\\DanhMucMonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T02:17:30.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BanController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\BanController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BanController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\BanController.cs",
+              "RelativeToolTip": "Controllers\\BanController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T02:25:44.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportController.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "Controllers\\ReportController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T02:43:18.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Report\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Report\\Index.cshtml",
               "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Report\\Index.cshtml",
               "RelativeToolTip": "Views\\Report\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-14T02:47:49.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\Checkout.cshtml",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Checkout.cshtml",
-              "RelativeToolTip": "Views\\Order\\Checkout.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwDIAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 44,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-14T02:39:45.125Z"
+              "WhenOpened": "2026-10-14T08:22:04.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 43,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mon\\Index.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Index.cshtml",
+              "RelativeToolTip": "Views\\Mon\\Index.cshtml",
+              "ViewState": "AgIAAHkAAAAAAAAAAABBwIAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T02:07:47.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
               "Title": "TaoOrder.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\TaoOrder.cshtml",
               "RelativeDocumentMoniker": "Views\\Order\\TaoOrder.cshtml",
@@ -198,82 +847,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Index.cshtml",
-              "RelativeToolTip": "Views\\Order\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-14T02:35:46.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAA4wIoAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 45,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA8wB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:34:12.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T08:24:38.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MonController.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\MonController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MonController.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\MonController.cs",
-              "RelativeToolTip": "Controllers\\MonController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAkwBYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:03:10.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Mon\\Index.cshtml",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Index.cshtml",
-              "RelativeToolTip": "Views\\Mon\\Index.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAgwGoAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 46,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Checkout.cshtml",
+              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Checkout.cshtml",
+              "RelativeToolTip": "Views\\Order\\Checkout.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-14T02:07:47.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T02:39:45.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\Details.cshtml",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Order\\Details.cshtml",
-              "RelativeToolTip": "Views\\Order\\Details.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-14T02:41:14.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReportController.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "Controllers\\ReportController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:43:18.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 48,
               "Title": "CartItem.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\ViewModels\\CartItem.cs",
               "RelativeDocumentMoniker": "ViewModels\\CartItem.cs",
@@ -285,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 49,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Ban\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Ban\\Delete.cshtml",
@@ -297,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 50,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Ban\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Ban\\Edit.cshtml",
@@ -309,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 51,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Ban\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Ban\\Create.cshtml",
@@ -321,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 52,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Ban\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Ban\\Index.cshtml",
@@ -333,19 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BanController.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\BanController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BanController.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\BanController.cs",
-              "RelativeToolTip": "Controllers\\BanController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:25:44.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 53,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhMucMon\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\DanhMucMon\\Delete.cshtml",
@@ -357,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 54,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhMucMon\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\DanhMucMon\\Edit.cshtml",
@@ -369,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 55,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhMucMon\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\DanhMucMon\\Create.cshtml",
@@ -381,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 56,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\DanhMucMon\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DanhMucMon\\Index.cshtml",
@@ -393,19 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DanhMucMonController.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DanhMucMonController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DanhMucMonController.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\DanhMucMonController.cs",
-              "RelativeToolTip": "Controllers\\DanhMucMonController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswEoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:17:30.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 57,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Mon\\Delete.cshtml",
@@ -417,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 58,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Mon\\Edit.cshtml",
@@ -429,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 59,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Mon\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Mon\\Create.cshtml",
@@ -441,19 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-14T02:01:09.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 60,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -465,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 61,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -477,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 62,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
@@ -489,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 63,
               "Title": "DbSeeder.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Data\\DbSeeder.cs",
               "RelativeDocumentMoniker": "Data\\DbSeeder.cs",
@@ -501,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 64,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -513,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 65,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -525,43 +1087,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "QuanCafeContext.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Data\\QuanCafeContext.cs",
-              "RelativeDocumentMoniker": "Data\\QuanCafeContext.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Data\\QuanCafeContext.cs",
-              "RelativeToolTip": "Data\\QuanCafeContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwCkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:45:05.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 66,
               "Title": "ChiTietOrder.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\ChiTietOrder.cs",
               "RelativeDocumentMoniker": "Models\\ChiTietOrder.cs",
               "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\ChiTietOrder.cs",
               "RelativeToolTip": "Models\\ChiTietOrder.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T01:43:31.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 67,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
               "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Order.cs",
               "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA5wCIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T01:43:14.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 68,
               "Title": "TaiKhoan.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\TaiKhoan.cs",
               "RelativeDocumentMoniker": "Models\\TaiKhoan.cs",
@@ -573,37 +1123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Ban.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Ban.cs",
-              "RelativeDocumentMoniker": "Models\\Ban.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Ban.cs",
-              "RelativeToolTip": "Models\\Ban.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:42:42.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Mon.cs",
-              "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Mon.cs",
-              "RelativeDocumentMoniker": "Models\\Mon.cs",
-              "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\Mon.cs",
-              "RelativeToolTip": "Models\\Mon.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:42:23.555Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 69,
               "Title": "DanhMucMon.cs",
               "DocumentMoniker": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\DanhMucMon.cs",
               "RelativeDocumentMoniker": "Models\\DanhMucMon.cs",
               "ToolTip": "D:\\K24CNT1-NET\\QLQuanCafe_Nhom1_K24CNT1\\QuanCafeWeb\\Models\\DanhMucMon.cs",
               "RelativeToolTip": "Models\\DanhMucMon.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T01:41:48.045Z"
             }

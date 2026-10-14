@@ -1,0 +1,41 @@
+﻿@model QuanCafeWeb.Models.TaiKhoan
+@{ ViewData["Title"] = "Thêm nhân viên"; }
+
+<h2 class="mb-3">➕ Thêm nhân viên</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Tên đăng nhập *</label>
+            <input asp-for="TenDangNhap" class="form-control" placeholder="VD: nhanvien2" />
+            <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Mật khẩu *</label>
+            <input type="password" name="matKhauGoc" class="form-control" required />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="HoTen" class="form-label fw-bold">Họ tên</label>
+            <input asp-for="HoTen" class="form-control" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="VaiTro" class="form-label fw-bold">Vai trò</label>
+            <select asp-for="VaiTro" class="form-select">
+                <option value="NhanVien">Nhân viên</option>
+                <option value="QuanTri">Quản trị</option>
+            </select>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">💾 Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">← Quay lại</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

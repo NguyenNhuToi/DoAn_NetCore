@@ -1,0 +1,109 @@
+@model List<QuanCafeWeb.Models.DatBan>
+@{
+    ViewData["Title"] = "Danh sách đặt bàn";
+}
+
+<h2 class="mb-3">📅 Danh sách đặt bàn</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+    <div class="col-md-3">
+        <input type="text" name="searchString" value="@ViewBag.SearchString" class="form-control" placeholder="Họ tên hoặc SĐT..." />
+    </div>
+    <div class="col-md-2">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Trạng thái --</option>
+            @if (ViewBag.TrangThai == "Chờ xác nhận")
+            {
+                <option value="Chờ xác nhận" selected>Chờ xác nhận</option>
+                <option value="Đã xác nhận">Đã xác nhận</option>
+                <option value="Đã hủy">Đã hủy</option>
+            }
+            else if (ViewBag.TrangThai == "Đã xác nhận")
+            {
+                <option value="Chờ xác nhận">Chờ xác nhận</option>
+                <option value="Đã xác nhận" selected>Đã xác nhận</option>
+                <option value="Đã hủy">Đã hủy</option>
+            }
+            else if (ViewBag.TrangThai == "Đã hủy")
+            {
+                <option value="Chờ xác nhận">Chờ xác nhận</option>
+                <option value="Đã xác nhận">Đã xác nhận</option>
+                <option value="Đã hủy" selected>Đã hủy</option>
+            }
+            else
+            {
+                <option value="Chờ xác nhận">Chờ xác nhận</option>
+                <option value="Đã xác nhận">Đã xác nhận</option>
+                <option value="Đã hủy">Đã hủy</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="tuNgay" value="@ViewBag.TuNgay" class="form-control" />
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary">🔍 Lọc</button>
+        <a asp-action="Index" class="btn btn-secondary">Reset</a>
+    </div>
+</form>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã</th>
+            <th>Bàn</th>
+            <th>Họ tên</th>
+            <th>SĐT</th>
+            <th>Ngày đặt</th>
+            <th>Giờ đặt</th>
+            <th>Số người</th>
+            <th>Ghi chú</th>
+            <th>Trạng thái</th>
+            <th width="260">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>#@item.MaDatBan</td>
+                <td>@item.Ban?.TenBan</td>
+                <td>@item.HoTen</td>
+                <td>@item.SoDienThoai</td>
+                <td>@item.NgayDat.ToString("dd/MM/yyyy")</td>
+                <td>@item.GioDat.ToString(@"hh\:mm")</td>
+                <td>@item.SoNguoi</td>
+                <td>@item.GhiChu</td>
+                <td>@item.TrangThai</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.MaDatBan" class="btn btn-info btn-sm">Xem</a>
+
+                    @if (item.TrangThai != "Đã xác nhận" && item.TrangThai != "Đã hủy")
+                    {
+                        <form asp-action="XacNhan" asp-route-id="@item.MaDatBan" method="post" style="display:inline"
+                              onsubmit="return confirm('Xác nhận đặt bàn này?');">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-success btn-sm">Xác nhận</button>
+                        </form>
+
+                        <form asp-action="Huy" asp-route-id="@item.MaDatBan" method="post" style="display:inline"
+                              onsubmit="return confirm('Hủy đặt bàn này?');">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-warning btn-sm">Hủy</button>
+                        </form>
+                    }
+
+                    @if (Context.Session.GetString("VaiTro") == "QuanTri")
+                    {
+                        <a asp-action="Delete" asp-route-id="@item.MaDatBan" class="btn btn-danger btn-sm">Xóa</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

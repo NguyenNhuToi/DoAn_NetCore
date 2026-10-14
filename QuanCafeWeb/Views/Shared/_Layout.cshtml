@@ -1,83 +1,225 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - QuanCafeWeb</title>
-    <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/QuanCafeWeb.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">☕ QuanCafeWeb</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <!-- MENU CHÍNH -->
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">🏠 Trang chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="DanhMucMon" asp-action="Index">📂 Danh mục</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Mon" asp-action="Index">☕ Món</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Ban" asp-action="Index">🪑 Bàn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Order" asp-action="Index">🧾 Order</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Report" asp-action="Index">📊 Báo cáo</a>
-                        </li>
-                    </ul>
 
-                    <!-- MENU TÀI KHOẢN (bên phải) -->
-                    <ul class="navbar-nav">
-                        @if (Context.Session.GetString("VaiTro") != null)
-                        {
-                            <li class="nav-item">
-                                <span class="nav-link text-dark">
-                                    👤 @Context.Session.GetString("HoTen")
-                                    (@Context.Session.GetString("VaiTro"))
-                                </span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" asp-controller="Account" asp-action="Logout">🚪 Đăng xuất</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-primary" asp-controller="Account" asp-action="Login">🔐 Đăng nhập</a>
-                            </li>
-                        }
-                    </ul>
+    @if (Context.Session.GetString("VaiTro") != null)
+    {
+        <!-- ========== ĐÃ ĐĂNG NHẬP → SIDEBAR + MAIN ========== -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                ☕ QuanCafe
+            </div>
+
+            <ul class="sidebar-menu">
+                <!-- ===== TRANG CHỦ ===== -->
+                <li>
+                    <a asp-controller="Home" asp-action="Index"
+                       class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+                        <i>🏠</i><span>Trang chủ</span>
+                    </a>
+                </li>
+
+                <!-- ===== THỰC ĐƠN (ai cũng vào) ===== -->
+                <li>
+                    <a asp-controller="Home" asp-action="Menu"
+                       class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Menu" ? "active" : "")">
+                        <i>☕</i><span>Thực đơn</span>
+                    </a>
+                </li>
+
+                <!-- ===== QUẢN LÝ (QT + NV) ===== -->
+                @if (Context.Session.GetString("VaiTro") == "QuanTri" || Context.Session.GetString("VaiTro") == "NhanVien")
+                {
+                    <li class="sidebar-section">Quản lý</li>
+
+                    <li>
+                        <a asp-controller="DanhMucMon" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "DanhMucMon" ? "active" : "")">
+                            <i>📂</i><span>Danh mục</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Mon" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Mon" ? "active" : "")">
+                            <i>🍽️</i><span>Món</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Ban" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Ban" ? "active" : "")">
+                            <i>🪑</i><span>Bàn</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-section">Nghiệp vụ</li>
+
+                    <li>
+                        <a asp-controller="Order" asp-action="TaoOrder"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Order" && ViewContext.RouteData.Values["action"]?.ToString() == "TaoOrder" ? "active" : "")">
+                            <i>➕</i><span>Tạo đơn hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Order" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Order" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+                            <i>🧾</i><span>Danh sách đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="DatBan" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "DatBan" ? "active" : "")">
+                            <i>📅</i><span>Đặt bàn</span>
+                        </a>
+                    </li>
+                }
+
+                <!-- ===== QUẢN TRỊ (chỉ QT) ===== -->
+                @if (Context.Session.GetString("VaiTro") == "QuanTri")
+                {
+                    <li class="sidebar-section">Quản trị</li>
+
+                    <li>
+                        <a asp-controller="NhanVien" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "NhanVien" ? "active" : "")">
+                            <i>👥</i><span>Nhân viên</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="CaLamViec" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "CaLamViec" ? "active" : "")">
+                            <i>⏰</i><span>Ca làm việc</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-section">Phân tích</li>
+
+                    <li>
+                        <a asp-controller="Report" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Report" ? "active" : "")">
+                            <i>📊</i><span>Báo cáo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="DanhGia" asp-action="Index"
+                           class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "DanhGia" ? "active" : "")">
+                            <i>⭐</i><span>Đánh giá</span>
+                        </a>
+                    </li>
+                }
+
+                <!-- ===== HỆ THỐNG ===== -->
+                <li class="sidebar-section">Hệ thống</li>
+                <li>
+                    <a asp-controller="Account" asp-action="Logout">
+                        <i>🚪</i><span>Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <div class="topbar">
+                <h2>@ViewData["Title"]</h2>
+                <div class="user-info">
+                    <div class="avatar">
+                        @(Context.Session.GetString("HoTen")?.FirstOrDefault() ?? 'U')
+                    </div>
+                    <div>
+                        <div style="font-weight:600;color:#1e293b;font-size:0.9rem;">
+                            @Context.Session.GetString("HoTen")
+                        </div>
+                        <div style="font-size:0.75rem;color:#64748b;">
+                            @if (Context.Session.GetString("VaiTro") == "QuanTri")
+                            {
+                                <span>👑 Quản trị viên</span>
+                            }
+                            else if (Context.Session.GetString("VaiTro") == "NhanVien")
+                            {
+                                <span>👨‍💼 Nhân viên</span>
+                            }
+                            else
+                            {
+                                <span>👤 Khách hàng</span>
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            <main role="main">
+                @RenderBody()
+            </main>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - QuanCafeWeb - Nhóm 1 - Lớp K24CNT1
+            <!-- Footer cho user đã đăng nhập -->
+            <footer class="text-center text-muted mt-5 pt-3" style="border-top:1px solid #e2e8f0;font-size:0.85rem;">
+                &copy; @DateTime.Now.Year - <b>QuanCafeWeb</b> | Nhóm 1 - Lớp K24CNT1 | Đồ án ASP.NET Core MVC
+            </footer>
         </div>
-    </footer>
+    }
+    else
+    {
+        <!-- ========== CHƯA ĐĂNG NHẬP → NAVBAR CÔNG KHAI ========== -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm mb-3 sticky-top">
+                <div class="container">
+                    <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                        ☕ QuanCafeWeb
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navKhach"
+                            aria-controls="navKhach" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navKhach">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Menu">
+                                    📖 Xem thực đơn
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="DatBan" asp-action="Create">
+                                    📅 Đặt bàn trước
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary text-white ms-2 px-3"
+                                   asp-controller="Account" asp-action="Login">
+                                    🔐 Đăng nhập
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <!-- Footer cho khách -->
+        <footer class="border-top text-muted mt-5 py-3 bg-light">
+            <div class="container text-center">
+                <small>
+                    &copy; @DateTime.Now.Year - <b>QuanCafeWeb</b> |
+                    Nhóm 1 - Lớp K24CNT1 |
+                    Đồ án ASP.NET Core MVC
+                </small>
+            </div>
+        </footer>
+    }
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

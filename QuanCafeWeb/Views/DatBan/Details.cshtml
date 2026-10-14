@@ -1,0 +1,62 @@
+@model QuanCafeWeb.Models.DatBan
+@{
+    ViewData["Title"] = "Chi tiết đặt bàn";
+}
+
+<h2>📋 Chi tiết đặt bàn</h2>
+
+<div class="mb-3">
+    <dl class="row">
+        <dt class="col-sm-2">Mã</dt>
+        <dd class="col-sm-10">#@Model.MaDatBan</dd>
+
+        <dt class="col-sm-2">Bàn</dt>
+        <dd class="col-sm-10">@Model.Ban?.TenBan</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.HoTen)</dt>
+        <dd class="col-sm-10">@Model.HoTen</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.SoDienThoai)</dt>
+        <dd class="col-sm-10">@Model.SoDienThoai</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.NgayDat)</dt>
+        <dd class="col-sm-10">@Model.NgayDat.ToString("dd/MM/yyyy")</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.GioDat)</dt>
+        <dd class="col-sm-10">@Model.GioDat.ToString(@"hh\:mm")</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.SoNguoi)</dt>
+        <dd class="col-sm-10">@Model.SoNguoi</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.GhiChu)</dt>
+        <dd class="col-sm-10">@Model.GhiChu ?? "-"</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.TrangThai)</dt>
+        <dd class="col-sm-10">@Model.TrangThai</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.NgayTao)</dt>
+        <dd class="col-sm-10">@Model.NgayTao.ToString("g")</dd>
+    </dl>
+</div>
+
+<p>
+    @if (Model.TrangThai != "Đã xác nhận" && Model.TrangThai != "Đã hủy")
+    {
+        <form asp-action="XacNhan" asp-route-id="@Model.MaDatBan" method="post" style="display:inline">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-success">✅ Xác nhận</button>
+        </form>
+
+        <form asp-action="Huy" asp-route-id="@Model.MaDatBan" method="post" style="display:inline" onsubmit="return confirm('Hủy đặt bàn này?');">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-warning">⚠️ Hủy</button>
+        </form>
+    }
+
+    @if (Context.Session.GetString("VaiTro") == "QuanTri")
+    {
+        <a asp-action="Delete" asp-route-id="@Model.MaDatBan" class="btn btn-danger">🗑️ Xóa</a>
+    }
+
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</p>

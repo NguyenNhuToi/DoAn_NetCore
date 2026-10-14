@@ -21,7 +21,7 @@ namespace QuanCafeWeb.Models
         public DanhMucMon? DanhMucMon { get; set; }
 
         [Required(ErrorMessage = "Giá bán không được để trống")]
-        [Range(0, double.MaxValue, ErrorMessage = "Giá bán phải >= 0")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Giá bán phải lớn hơn 0")]
         [Display(Name = "Giá bán")]
         public decimal GiaBan { get; set; }
 

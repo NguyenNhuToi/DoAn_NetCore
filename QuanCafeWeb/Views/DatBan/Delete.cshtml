@@ -1,0 +1,46 @@
+@model QuanCafeWeb.Models.DatBan
+@{
+    ViewData["Title"] = "Xóa đặt bàn";
+}
+
+<h2>🗑️ Xóa đặt bàn #@Model.MaDatBan</h2>
+<h4 class="text-danger">Bạn có chắc muốn xóa đặt bàn này?</h4>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Bàn</dt>
+            <dd class="col-sm-9">@Model.Ban?.TenBan ?? "-"</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.HoTen)</dt>
+            <dd class="col-sm-9">@Model.HoTen</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.SoDienThoai)</dt>
+            <dd class="col-sm-9">@Model.SoDienThoai</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.NgayDat)</dt>
+            <dd class="col-sm-9">@Model.NgayDat.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.GioDat)</dt>
+            <dd class="col-sm-9">@Model.GioDat.ToString(@"hh\:mm")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.SoNguoi)</dt>
+            <dd class="col-sm-9">@Model.SoNguoi</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.GhiChu)</dt>
+            <dd class="col-sm-9">@Model.GhiChu ?? "-"</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.TrangThai)</dt>
+            <dd class="col-sm-9">@Model.TrangThai</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.NgayTao)</dt>
+            <dd class="col-sm-9">@Model.NgayTao.ToString("g")</dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-3">
+    <input type="hidden" asp-for="MaDatBan" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

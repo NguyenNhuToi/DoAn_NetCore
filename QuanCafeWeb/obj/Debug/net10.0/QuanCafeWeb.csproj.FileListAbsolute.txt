@@ -469,7 +469,6 @@ D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\rjsmcshtml
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\scopedcss\bundle\QuanCafeWeb.styles.css
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\scopedcss\projectbundle\QuanCafeWeb.bundle.scp.css
-D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\compressed\wqvfvp2x2e-{0}-b9sayid5wm-b9sayid5wm.gz
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\compressed\bvxw8smvzm-{0}-61n19gt1b8-61n19gt1b8.gz
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\compressed\alr1q3yl4f-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\compressed\03kylezjk0-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -545,3 +544,8 @@ D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\refint\Qua
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\QuanCafeWeb.pdb
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\QuanCafeWeb.genruntimeconfig.cache
 D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\ref\QuanCafeWeb.dll
+D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\QuanCafeWeb.sourcelink.json
+D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\bin\Debug\net10.0\System.Security.Cryptography.Pkcs.dll
+D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll
+D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\compressed\c4j3b9nwms-{0}-l36eysmb2s-l36eysmb2s.gz
+D:\K24CNT1-NET\QLQuanCafe_Nhom1_K24CNT1\QuanCafeWeb\obj\Debug\net10.0\compressed\wqvfvp2x2e-{0}-ae0rrayqd3-ae0rrayqd3.gz

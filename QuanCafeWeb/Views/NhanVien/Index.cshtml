@@ -1,0 +1,109 @@
+﻿@model List<QuanCafeWeb.Models.TaiKhoan>
+@{ ViewData["Title"] = "Quản lý nhân viên"; }
+
+<h2 class="mb-3">👥 Quản lý nhân viên</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show">
+        ✅ @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show">
+        ⚠️ @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+    <div class="col-md-3">
+        <input type="text" name="searchString" value="@ViewBag.SearchString"
+               class="form-control" placeholder="Tên / Tên đăng nhập..." />
+    </div>
+    <div class="col-md-2">
+        <select name="vaiTro" class="form-select">
+            <option value="">-- Vai trò --</option>
+            @if (ViewBag.VaiTro == "QuanTri")
+            {
+                <option value="QuanTri" selected>Quản trị</option>
+                <option value="NhanVien">Nhân viên</option>
+            }
+            else if (ViewBag.VaiTro == "NhanVien")
+            {
+                <option value="QuanTri">Quản trị</option>
+                <option value="NhanVien" selected>Nhân viên</option>
+            }
+            else
+            {
+                <option value="QuanTri">Quản trị</option>
+                <option value="NhanVien">Nhân viên</option>
+            }
+        </select>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary">🔍 Lọc</button>
+        <a asp-action="Index" class="btn btn-secondary">↺ Reset</a>
+        <a asp-action="Create" class="btn btn-success">➕ Thêm nhân viên</a>
+    </div>
+</form>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã</th>
+            <th>Họ tên</th>
+            <th>Tên đăng nhập</th>
+            <th>Vai trò</th>
+            <th>Trạng thái</th>
+            <th width="200">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaTK</td>
+                <td>@item.HoTen</td>
+                <td>@item.TenDangNhap</td>
+                <td>
+                    @if (item.VaiTro == "QuanTri")
+                    {
+                        <span class="badge bg-danger">Quản trị</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-primary">Nhân viên</span>
+                    }
+                </td>
+                <td>
+                    @if (item.TrangThai)
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                    else
+                    {
+<span class="badge bg-secondary">Đã khóa</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaTK" class="btn btn-warning btn-sm">✏️ Sửa</a>
+
+                    @if (item.TrangThai)
+                    {
+                        <a asp-action="Delete" asp-route-id="@item.MaTK" class="btn btn-danger btn-sm">🔒 Khóa</a>
+                    }
+                    else
+                    {
+                        <form asp-action="MoKhoa" asp-route-id="@item.MaTK" method="post" style="display:inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-success btn-sm">🔓 Mở khóa</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

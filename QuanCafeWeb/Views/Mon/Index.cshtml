@@ -1,6 +1,8 @@
 @model X.PagedList.IPagedList<QuanCafeWeb.Models.Mon>
 @using X.PagedList.Mvc.Core
-@{ ViewData["Title"] = "Danh sách món"; }
+@{
+    ViewData["Title"] = "Danh sách món";
+}
 
 <h2>☕ Danh sách món</h2>
 
@@ -28,6 +30,29 @@
         <input type="number" name="giaMax" value="@ViewBag.GiaMax"
                class="form-control" placeholder="Đến giá..." />
     </div>
+
+    <!-- ⭐DROPDOWN TRẠNG THÁI -->
+    <div class="col-md-2">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Trạng thái --</option>
+            @if (ViewBag.TrangThai == true)
+            {
+                <option value="true" selected>✅ Còn bán</option>
+                <option value="false">❌ Hết hàng</option>
+            }
+            else if (ViewBag.TrangThai == false)
+            {
+                <option value="true">✅ Còn bán</option>
+                <option value="false" selected>❌ Hết hàng</option>
+            }
+            else
+            {
+                <option value="true">✅ Còn bán</option>
+                <option value="false">❌ Hết hàng</option>
+            }
+        </select>
+    </div>
+
     <div class="col-auto">
         <button type="submit" class="btn btn-primary">🔍 Lọc</button>
         <a asp-action="Index" class="btn btn-secondary">↺ Reset</a>
@@ -46,6 +71,7 @@
                    asp-route-maDM="@ViewBag.CurrentMaDM"
                    asp-route-giaMin="@ViewBag.GiaMin"
                    asp-route-giaMax="@ViewBag.GiaMax"
+                   asp-route-trangThai="@ViewBag.TrangThai"
                    class="text-white text-decoration-none">
                     Tên món ↕
                 </a>
@@ -58,6 +84,7 @@
                    asp-route-maDM="@ViewBag.CurrentMaDM"
                    asp-route-giaMin="@ViewBag.GiaMin"
                    asp-route-giaMax="@ViewBag.GiaMax"
+                   asp-route-trangThai="@ViewBag.TrangThai"
                    class="text-white text-decoration-none">
                     Giá bán ↕
                 </a>
@@ -81,8 +108,14 @@
                     }
                 </td>
                 <td>
-                    @if (item.TrangThai) { <span class="badge bg-success">Còn bán</span> }
-                    else { <span class="badge bg-danger">Hết</span> }
+                    @if (item.TrangThai)
+                    {
+                        <span class="badge bg-success">Còn bán</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Hết</span>
+                    }
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.MaMon" class="btn btn-warning btn-sm">Sửa</a>
@@ -102,6 +135,7 @@
         maDM = ViewBag.CurrentMaDM,
         giaMin = ViewBag.GiaMin,
         giaMax = ViewBag.GiaMax,
+        trangThai = ViewBag.TrangThai,   
         sortOrder = ViewBag.CurrentSort
     }))
 </div>

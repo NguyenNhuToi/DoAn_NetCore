@@ -1,45 +1,189 @@
-@model IEnumerable<QuanCafeWeb.Models.Order>
+@model X.PagedList.IPagedList<QuanCafeWeb.Models.Order>
+@using X.PagedList.Mvc.Core
 @{
-    ViewData["Title"] = "Danh sách order";
+    ViewData["Title"] = "Danh sách đơn hàng";
+    var vaiTro = Context.Session.GetString("VaiTro");
 }
 
-<h2>🧾 Danh sách order</h2>
+<h2 class="mb-3">🧾 Danh sách đơn hàng</h2>
 
+<!-- ===== THÔNG BÁO (có nút đóng) ===== -->
 @if (TempData["Success"] != null)
 {
-    <div class="alert alert-success">@TempData["Success"]</div>
+    <div class="alert alert-success alert-dismissible fade show">
+        ✅ @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show">
+        ⚠️ @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
 }
 
-<div class="mb-3">
-    <a asp-action="TaoOrder" class="btn btn-success">➕ Tạo order</a>
-</div>
+<!-- ===== FORM LỌC ===== -->
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+    <div class="col-md-2">
+        <select name="maBan" class="form-select" asp-items="ViewBag.MaBan">
+            <option value="">-- Tất cả bàn --</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select name="loaiOrder" class="form-select">
+            <option value="">-- Loại order --</option>
+            @if (ViewBag.LoaiOrder == "Tại chỗ")
+            {
+                <option value="Tại chỗ" selected>Tại chỗ</option>
+                <option value="Mang đi">Mang đi</option>
+            }
+            else if (ViewBag.LoaiOrder == "Mang đi")
+            {
+                <option value="Tại chỗ">Tại chỗ</option>
+                <option value="Mang đi" selected>Mang đi</option>
+            }
+            else
+            {
+                <option value="Tại chỗ">Tại chỗ</option>
+                <option value="Mang đi">Mang đi</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="tuNgay" value="@ViewBag.TuNgay" class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="denNgay" value="@ViewBag.DenNgay" class="form-control" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">🔍 Lọc</button>
+        <a asp-action="Index" class="btn btn-secondary">↺ Reset</a>
+        <a asp-action="TaoOrder" class="btn btn-success">➕ Tạo đơn</a>
+    </div>
+</form>
 
+<!-- ===== BẢNG ===== -->
 <table class="table table-bordered table-hover">
     <thead class="table-dark">
         <tr>
-            <th>Mã order</th>
+            <th>Mã</th>
             <th>Bàn</th>
             <th>Loại</th>
-            <th>Giờ vào</th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.SortNgayAsc"
+                   asp-route-maBan="@ViewBag.CurrentMaBan"
+                   asp-route-loaiOrder="@ViewBag.LoaiOrder"
+                   asp-route-tuNgay="@ViewBag.TuNgay"
+                   asp-route-denNgay="@ViewBag.DenNgay"
+                   class="text-white text-decoration-none">Giờ vào ↕</a>
+            </th>
             <th>Giờ ra</th>
-            <th>Tổng tiền</th>
-            <th width="120">Hành động</th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.SortTienAsc"
+                   asp-route-maBan="@ViewBag.CurrentMaBan"
+                   asp-route-loaiOrder="@ViewBag.LoaiOrder"
+                   asp-route-tuNgay="@ViewBag.TuNgay"
+                   asp-route-denNgay="@ViewBag.DenNgay"
+                   class="text-white text-decoration-none">Tổng tiền ↕</a>
+            </th>
+            <th>Trạng thái</th>
+            <th width="340">Hành động</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @if (Model != null && Model.Count > 0)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>#@item.MaOrder</td>
+                    <td>@(item.Ban?.TenBan ?? "Mang đi")</td>
+                    <td>@item.LoaiOrder</td>
+                    <td>@item.GioVao.ToString("dd/MM/yyyy HH:mm")</td>
+
+                    <td>
+                        @if (item.GioRa.HasValue)
+                        {
+                            @item.GioRa.Value.ToString("dd/MM/yyyy HH:mm")
+                        }
+                        else
+                        {
+                            <span class="text-muted">-</span>
+                        }
+                    </td>
+
+                    <td class="fw-bold text-danger">@item.TongTien.ToString("N0")đ</td>
+
+                    <td>
+                        @if (item.GioRa == null)
+                        {
+                            <span class="badge bg-warning text-dark">⏳ Chưa thanh toán</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">✅ Đã thanh toán</span>
+                        }
+                    </td>
+
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.MaOrder" class="btn btn-info btn-sm">👁️ Xem</a>
+
+                        @* Sửa: QT luôn được, NV chỉ khi chưa xong *@
+                        @if (vaiTro == "QuanTri" || item.GioRa == null)
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.MaOrder" class="btn btn-warning btn-sm">✏️ Sửa</a>
+                        }
+
+                        @* Xóa: chỉ QT + chưa xong *@
+                        @if (vaiTro == "QuanTri" && item.GioRa == null)
+                        {
+                            <a asp-action="Delete" asp-route-id="@item.MaOrder" class="btn btn-danger btn-sm">🗑️ Xóa</a>
+                        }
+
+                        @* Xong: cả NV + QT, chỉ khi chưa xong *@
+                        @if (item.GioRa == null)
+                        {
+                            <form asp-action="HoanThanh" asp-route-id="@item.MaOrder" method="post"
+                                  style="display:inline"
+                                  onsubmit="return confirm('Đánh dấu hoàn thành đơn #@item.MaOrder?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-success btn-sm">✓ Xong</button>
+                            </form>
+                        }
+
+                        @* Khóa HĐ: chỉ QT + chưa xong *@
+                        @if (vaiTro == "QuanTri" && item.GioRa == null)
+                        {
+                            <form asp-action="KhoaHoaDon" asp-route-id="@item.MaOrder" method="post"
+                                  style="display:inline"
+                                  onsubmit="return confirm('Khóa hóa đơn #@item.MaOrder?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-dark btn-sm">🔒 Khóa</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@item.MaOrder</td>
-                <td>@item.Ban?.TenBan</td>
-                <td>@item.LoaiOrder</td>
-                <td>@item.GioVao.ToString("g")</td>
-                <td>@(item.GioRa.HasValue ? item.GioRa.Value.ToString("g") : "-")</td>
-                <td>@item.TongTien.ToString("N0") VNĐ</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.MaOrder" class="btn btn-primary btn-sm">Chi tiết</a>
-                </td>
+                <td colspan="8" class="text-center text-muted p-4">📭 Chưa có đơn hàng nào</td>
             </tr>
         }
     </tbody>
 </table>
+
+<!-- ===== PHÂN TRANG ===== -->
+<div class="d-flex justify-content-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new
+    {
+        page,
+        maBan = ViewBag.CurrentMaBan,
+        loaiOrder = ViewBag.LoaiOrder,
+        tuNgay = ViewBag.TuNgay,
+        denNgay = ViewBag.DenNgay,
+        sortOrder = ViewBag.CurrentSort
+    }))
+</div>

@@ -1,0 +1,78 @@
+﻿@model List<QuanCafeWeb.Models.DanhGia>
+@{
+    ViewData["Title"] = "Đánh giá món";
+    var mon = ViewBag.Mon as QuanCafeWeb.Models.Mon;
+    double soSaoTB = ViewBag.SoSaoTrungBinh;
+    int tongDG = ViewBag.TongDanhGia;
+}
+
+<div class="container mt-4">
+    <h2>⭐ Đánh giá: @mon?.TenMon</h2>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h1 class="text-warning">@soSaoTB.ToString("0.0") / 5</h1>
+                    <div>
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            if (i <= Math.Round(soSaoTB))
+                            {
+                                <span style="font-size:1.5rem;" class="text-warning">⭐</span>
+                            }
+                            else
+                            {
+                                <span style="font-size:1.5rem;" class="text-muted">☆</span>
+                            }
+                        }
+                    </div>
+                    <p class="mt-2">@tongDG đánh giá</p>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <a asp-action="Create" asp-route-maMon="@mon?.MaMon" class="btn btn-warning w-100">
+                        ✍️ Viết đánh giá của bạn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.Count == 0)
+    {
+        <p class="text-muted text-center">Chưa có đánh giá nào cho món này.</p>
+    }
+    else
+    {
+        foreach (var dg in Model)
+        {
+            <div class="card mb-2">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <b>@(string.IsNullOrEmpty(dg.HoTen) ? "Ẩn danh" : dg.HoTen)</b>
+                            <span class="ms-2">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= dg.SoSao)
+                                    {
+                                        <span class="text-warning">⭐</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">☆</span>
+                                    }
+                                }
+                            </span>
+                        </div>
+                        <small class="text-muted">@dg.NgayTao.ToString("dd/MM/yyyy HH:mm")</small>
+                    </div>
+                    @if (!string.IsNullOrEmpty(dg.BinhLuan))
+                    {
+                        <p class="mt-2 mb-0">@dg.BinhLuan</p>
+                    }
+                </div>
+            </div>
+        }
+    }
+</div>

@@ -1,8 +1,226 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model QuanCafeWeb.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "Trang Chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- ===== 4 THẺ THỐNG KÊ CHÍNH ===== -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6 col-xl-3">
+        <div class="stat-card bg-gradient-blue">
+            <h6>☕ Tổng số món</h6>
+            <h2>@Model.SoMon</h2>
+            <small>món trong thực đơn</small>
+            <div class="stat-icon">☕</div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="stat-card bg-gradient-green">
+            <h6>🪑 Tổng số bàn</h6>
+            <h2>@Model.SoBan</h2>
+            <small>@Model.BanDangPhucVu.Count bàn đang phục vụ</small>
+            <div class="stat-icon">🪑</div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="stat-card bg-gradient-orange">
+            <h6>🧾 Tổng đơn hàng</h6>
+            <h2>@Model.SoOrder</h2>
+            <small>đơn hàng đã tạo</small>
+            <div class="stat-icon">🧾</div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="stat-card bg-gradient-red">
+            <h6>👥 Nhân viên</h6>
+            <h2>@Model.SoNhanVien</h2>
+            <small>nhân viên đang làm việc</small>
+            <div class="stat-icon">👥</div>
+        </div>
+    </div>
 </div>
+
+<!-- ===== 4 THẺ DOANH THU ===== -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6 col-xl-3">
+        <div class="content-card">
+            <div class="card-body">
+                <h6 class="text-muted">💰 Hôm nay</h6>
+                <h3 class="text-success fw-bold">@Model.DoanhThuHomNay.ToString("N0")đ</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="content-card">
+            <div class="card-body">
+                <h6 class="text-muted">📅 Tuần này</h6>
+                <h3 class="text-primary fw-bold">@Model.DoanhThuTuan.ToString("N0")đ</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="content-card">
+            <div class="card-body">
+                <h6 class="text-muted">🗓️ Tháng này</h6>
+                <h3 class="text-warning fw-bold">@Model.DoanhThuThang.ToString("N0")đ</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="content-card">
+            <div class="card-body">
+                <h6 class="text-muted">📆 Năm nay</h6>
+                <h3 class="text-info fw-bold">@Model.DoanhThuNam.ToString("N0")đ</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== BIỂU ĐỒ + TOP MÓN ===== -->
+<div class="row g-4 mb-4">
+    <div class="col-lg-8">
+        <div class="content-card">
+            <div class="card-header">📈 Doanh thu 7 ngày gần nhất</div>
+            <div class="card-body">
+                <canvas id="chartDoanhThu" height="100"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="content-card">
+            <div class="card-header">🏆 Top 5 món bán chạy</div>
+            <div class="card-body">
+                <canvas id="chartTopMon" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== ĐƠN GẦN ĐÂY + BÀN ĐANG PHỤC VỤ ===== -->
+<div class="row g-4">
+    <div class="col-lg-7">
+        <div class="content-card">
+            <div class="card-header">🧾 Đơn hàng gần đây</div>
+            <div class="card-body p-0">
+                @if (Model.DonHangGanDay.Count > 0)
+                {
+                    <table class="table table-hover mb-0">
+                        <thead style="background:#f8fafc;">
+                            <tr>
+                                <th>Mã</th>
+                                <th>Bàn</th>
+                                <th>Loại</th>
+                                <th>Giờ</th>
+                                <th class="text-end">Tổng tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var dh in Model.DonHangGanDay)
+                            {
+                                <tr>
+                                    <td><b>#@dh.MaOrder</b></td>
+                                    <td>@(dh.Ban?.TenBan ?? "Mang đi")</td>
+                                    <td>
+                                        @if (dh.LoaiOrder == "Tại chỗ")
+                                        {
+                                            <span class="badge bg-primary">Tại chỗ</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning text-dark">Mang đi</span>
+                                        }
+                                    </td>
+                                    <td>@dh.GioVao.ToString("HH:mm dd/MM")</td>
+                                    <td class="text-end text-danger fw-bold">@dh.TongTien.ToString("N0")đ</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-muted text-center p-4">Chưa có đơn hàng nào.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="content-card">
+            <div class="card-header">🪑 Bàn đang phục vụ (@Model.BanDangPhucVu.Count)</div>
+            <div class="card-body">
+                @if (Model.BanDangPhucVu.Count > 0)
+                {
+                    foreach (var ban in Model.BanDangPhucVu)
+                    {
+                        <span class="ban-item">@ban.TenBan</span>
+                    }
+                }
+                else
+                {
+                    <p class="text-muted text-center">Tất cả bàn đang trống.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Biểu đồ doanh thu 7 ngày
+        var labels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Labels7Ngay));
+        var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Data7Ngay));
+
+        new Chart(document.getElementById('chartDoanhThu'), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Doanh thu (VNĐ)',
+                    data: data,
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#3b82f6',
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: v => v.toLocaleString() + 'đ' }
+                    }
+                }
+            }
+        });
+
+        // Biểu đồ top 5 món
+        var topLabels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TopMonTen));
+        var topData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TopMonSoLuong));
+
+        new Chart(document.getElementById('chartTopMon'), {
+            type: 'doughnut',
+            data: {
+                labels: topLabels,
+                datasets: [{
+                    data: topData,
+                    backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { size: 11 } } }
+                }
+            }
+        });
+    </script>
+}

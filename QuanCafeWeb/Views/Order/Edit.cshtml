@@ -1,0 +1,107 @@
+@model QuanCafeWeb.Models.Order
+@{
+    ViewData["Title"] = "Sửa đơn hàng";
+}
+
+<h2 class="mb-3">✏️ Sửa đơn hàng #@Model.MaOrder</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show">
+        ⚠️ @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="MaOrder" />
+    <input type="hidden" asp-for="GioVao" />
+    <input type="hidden" asp-for="TongTien" />
+
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <!-- ===== KHỐI 1: THÔNG TIN CẦN SỬA ===== -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <b>📝 Thông tin đơn hàng</b>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="MaBan" class="form-label fw-bold">Bàn</label>
+                    <select asp-for="MaBan" class="form-select" asp-items="ViewBag.Bans">
+                        <option value="">-- Mang đi --</option>
+                    </select>
+                    <span asp-validation-for="MaBan" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="LoaiOrder" class="form-label fw-bold">Loại order</label>
+                    <select asp-for="LoaiOrder" class="form-select">
+                        <option value="Tại chỗ">Tại chỗ</option>
+                        <option value="Mang đi">Mang đi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="GioRa" class="form-label fw-bold">
+                        Giờ ra <span class="text-muted">(để trống nếu chưa thanh toán)</span>
+                    </label>
+                    <input asp-for="GioRa" type="datetime-local" class="form-control"
+                           value="@(Model.GioRa?.ToString("yyyy-MM-ddTHH:mm"))" />
+                    <span asp-validation-for="GioRa" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== KHỐI 2: THÔNG TIN HIỆN TẠI ===== -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-info text-white">
+            <b>ℹ️ Thông tin hiện tại</b>
+        </div>
+        <div class="card-body">
+            <dl class="row mb-0">
+                <dt class="col-sm-3">Giờ vào:</dt>
+                <dd class="col-sm-9">@Model.GioVao.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                <dt class="col-sm-3">Tổng tiền:</dt>
+                <dd class="col-sm-9">
+                    <span class="text-danger fw-bold fs-5">@Model.TongTien.ToString("N0") VNĐ</span>
+                </dd>
+
+                <dt class="col-sm-3">Trạng thái:</dt>
+                <dd class="col-sm-9">
+                    @if (Model.GioRa == null)
+                    {
+                        <span class="badge bg-warning text-dark">⏳ Chưa thanh toán</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">✅ Đã thanh toán</span>
+                    }
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- ===== NÚT HÀNH ĐỘNG ===== -->
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-warning">
+            💾 Cập nhật
+        </button>
+        <a asp-action="Details" asp-route-id="@Model.MaOrder" class="btn btn-info">
+            👁️ Xem chi tiết
+        </a>
+        <a asp-action="Index" class="btn btn-secondary">
+            ← Quay lại
+        </a>
+    </div>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

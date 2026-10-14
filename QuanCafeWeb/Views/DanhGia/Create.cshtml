@@ -1,0 +1,43 @@
+@model QuanCafeWeb.Models.DanhGia
+@{
+    ViewData["Title"] = "Đánh giá";
+}
+
+<h2>⭐ Đánh giá: @ViewBag.Mon?.TenMon</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input asp-for="MaMon" type="hidden" />
+
+    <div class="mb-3">
+        <label asp-for="HoTen" class="form-label"></label>
+        <input asp-for="HoTen" class="form-control" />
+        <span asp-validation-for="HoTen" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SoSao" class="form-label"></label>
+        <select asp-for="SoSao" class="form-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <span asp-validation-for="SoSao" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="BinhLuan" class="form-label"></label>
+        <textarea asp-for="BinhLuan" class="form-control"></textarea>
+        <span asp-validation-for="BinhLuan" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Gửi đánh giá</button>
+    <a asp-action="XemDanhGia" asp-route-maMon="@Model.MaMon" class="btn btn-secondary">Quay lại</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

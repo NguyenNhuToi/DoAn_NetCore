@@ -1,0 +1,87 @@
+@model QuanCafeWeb.Models.DatBan
+@{ ViewData["Title"] = "Đặt bàn"; }
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">📅 Đặt bàn trước</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="MaBan" class="form-label fw-bold"></label>
+                            <select asp-for="MaBan" class="form-select" asp-items="ViewBag.Bans">
+                                <option value="">-- Chọn bàn --</option>
+                            </select>
+                            <span asp-validation-for="MaBan" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="HoTen" class="form-label fw-bold"></label>
+                                <input asp-for="HoTen" class="form-control" placeholder="VD: Nguyễn Văn A" />
+                                <span asp-validation-for="HoTen" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="SoDienThoai" class="form-label fw-bold"></label>
+                                <input asp-for="SoDienThoai" class="form-control" placeholder="10-11 chữ số" />
+                                <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="NgayDat" class="form-label fw-bold"></label>
+                                <input asp-for="NgayDat" class="form-control" type="date"
+                                       min="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                                <span asp-validation-for="NgayDat" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="GioDat" class="form-label fw-bold"></label>
+                                <input asp-for="GioDat" class="form-control" type="time"
+                                       min="07:00" max="22:00" />
+                                <span asp-validation-for="GioDat" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="SoNguoi" class="form-label fw-bold"></label>
+                            <input asp-for="SoNguoi" class="form-control" type="number" min="1" max="20" />
+                            <span asp-validation-for="SoNguoi" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="GhiChu" class="form-label fw-bold"></label>
+                            <textarea asp-for="GhiChu" class="form-control" rows="3"
+                                      placeholder="VD: Bàn gần cửa sổ, có trẻ em..."></textarea>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg">📩 Đặt bàn</button>
+                            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- HỘP LƯU Ý -->
+            <div class="alert alert-info mt-3">
+                <h6 class="fw-bold">📌 Lưu ý khi đặt bàn:</h6>
+                <ul class="mb-0 small">
+                    <li>Quán mở cửa: <b>7:00 - 22:00</b></li>
+                    <li>Số người <b>không vượt quá số ghế</b> của bàn</li>
+                    <li>Không đặt trùng bàn trong khung giờ gần nhau (cách &lt; 2 giờ)</li>
+                    <li>Ngày đặt <b>không được trùng bàn của ngày trước</b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -2,31 +2,62 @@
     ViewData["Title"] = "Báo cáo doanh thu";
 }
 
-<h2>📊 Báo cáo doanh thu</h2>
+<h2 class="mb-4">📊 Báo cáo doanh thu</h2>
 
-<!-- ===== 3 THẺ THỐNG KÊ TỔNG QUAN ===== -->
-<div class="row mb-4">
-    <div class="col-md-4">
+<!-- ===== 4 THẺ DOANH THU ===== -->
+<div class="row g-3 mb-4">
+    <div class="col-md-6 col-xl-3">
         <div class="card text-white bg-success shadow">
             <div class="card-body">
-                <h6>💰 Doanh thu hôm nay</h6>
+                <h6>💰 Hôm nay</h6>
                 <h3>@(((decimal)ViewBag.DoanhThuHomNay).ToString("N0")) đ</h3>
+                <small>@ViewBag.DonHomNay đơn</small>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
         <div class="card text-white bg-primary shadow">
             <div class="card-body">
-                <h6>📅 Doanh thu tháng này</h6>
-                <h3>@(((decimal)ViewBag.DoanhThuThang).ToString("N0")) đ</h3>
+                <h6>📅 Tuần này</h6>
+                <h3>@(((decimal)ViewBag.DoanhThuTuan).ToString("N0")) đ</h3>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
+        <div class="card text-white bg-warning shadow">
+            <div class="card-body">
+                <h6>🗓️ Tháng này</h6>
+                <h3>@(((decimal)ViewBag.DoanhThuThang).ToString("N0")) đ</h3>
+                <small>@ViewBag.DonThang đơn</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
         <div class="card text-white bg-info shadow">
             <div class="card-body">
-                <h6>🧾 Tổng số đơn hàng</h6>
-                <h3>@ViewBag.TongDonHang đơn</h3>
+                <h6>📆 Năm nay</h6>
+                <h3>@(((decimal)ViewBag.DoanhThuNam).ToString("N0")) đ</h3>
+                <small>Tổng: @ViewBag.TongDonHang đơn</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== DOANH THU THEO LOẠI ===== -->
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-body">
+                <h6>🍽️ Doanh thu Tại chỗ</h6>
+                <h3 class="text-primary">@(((decimal)ViewBag.DoanhThuTaiCho).ToString("N0")) đ</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-body">
+                <h6>🥡 Doanh thu Mang đi</h6>
+                <h3 class="text-warning">@(((decimal)ViewBag.DoanhThuMangDi).ToString("N0")) đ</h3>
             </div>
         </div>
     </div>
@@ -42,83 +73,115 @@
     </div>
 </div>
 
-<!-- ===== BIỂU ĐỒ TOP 5 MÓN BÁN CHẠY ===== -->
-<div class="card shadow">
-    <div class="card-header bg-warning text-dark">
-        <h5 class="mb-0">🏆 Top 5 món bán chạy</h5>
+<!-- ===== 2 BIỂU ĐỒ TOP ===== -->
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-warning">
+                <h5 class="mb-0">🏆 Top 5 món bán chạy</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="chartTopMon" height="220"></canvas>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-        <canvas id="chartTopMon" height="100"></canvas>
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">🪑 Top 5 bàn doanh thu cao</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="chartTopBan" height="220"></canvas>
+            </div>
+        </div>
     </div>
 </div>
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // ===== 1. Biểu đồ doanh thu 7 ngày =====
-        var labelsDoanhThu = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Labels));
-        var dataDoanhThu = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Data));
+        // ===== 1. BIỂU ĐỒ ĐƯỜNG - DOANH THU 7 NGÀY =====
+        var labels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Labels));
+        var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Data));
 
         new Chart(document.getElementById('chartDoanhThu'), {
             type: 'line',
             data: {
-                labels: labelsDoanhThu,
+                labels: labels,
                 datasets: [{
                     label: 'Doanh thu (VNĐ)',
-                    data: dataDoanhThu,
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 2,
+                    data: data,
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
                     fill: true,
-                    tension: 0.3
+                    pointBackgroundColor: '#3b82f6',
+                    pointRadius: 5,
+                    pointHoverRadius: 7
                 }]
             },
             options: {
                 responsive: true,
-                plugins: {
-                    legend: { display: true }
-                },
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
                 scales: {
-                    y: { beginAtZero: true }
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: v => v.toLocaleString() + 'đ' }
+                    }
                 }
             }
         });
 
-        // ===== 2. Biểu đồ Top 5 món =====
-        var labelsTopMon = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopMonLabels));
-        var dataTopMon = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopMonData));
+        // ===== 2. BIỂU ĐỒ TRÒN - TOP 5 MÓN =====
+        var topMonLabels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopMonLabels));
+        var topMonData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopMonData));
 
         new Chart(document.getElementById('chartTopMon'), {
-            type: 'bar',
+            type: 'doughnut',
             data: {
-                labels: labelsTopMon,
+                labels: topMonLabels,
                 datasets: [{
-                    label: 'Số lượng đã bán',
-                    data: dataTopMon,
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.7)',
-                        'rgba(54, 162, 235, 0.7)',
-                        'rgba(255, 206, 86, 0.7)',
-                        'rgba(75, 192, 192, 0.7)',
-                        'rgba(153, 102, 255, 0.7)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)'
-                    ],
-                    borderWidth: 1
+                    data: topMonData,
+                    backgroundColor: ['#a855f7', '#06b6d4', '#ec4899', '#fbbf24', '#10b981'],
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
                 plugins: {
-                    legend: { display: false }
-                },
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // ===== 3. BIỂU ĐỒ CỘT - TOP 5 BÀN =====
+        var topBanLabels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopBanLabels));
+        var topBanData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopBanData));
+
+        new Chart(document.getElementById('chartTopBan'), {
+            type: 'bar',
+            data: {
+                labels: topBanLabels,
+                datasets: [{
+                    label: 'Doanh thu (VNĐ)',
+                    data: topBanData,
+                    backgroundColor: '#3b82f6',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
                 scales: {
-                    y: { beginAtZero: true }
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: v => v.toLocaleString() + 'đ' }
+                    }
                 }
             }
         });

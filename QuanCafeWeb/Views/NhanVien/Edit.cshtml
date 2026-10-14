@@ -1,0 +1,53 @@
+﻿@model QuanCafeWeb.Models.TaiKhoan
+@{ ViewData["Title"] = "Sửa nhân viên"; }
+
+<h2 class="mb-3">✏️ Sửa nhân viên: @Model.HoTen</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="MaTK" />
+    <input type="hidden" asp-for="TenDangNhap" />
+
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <p><b>Tên đăng nhập:</b> @Model.TenDangNhap</p>
+            <p class="mb-0"><b>Mã tài khoản:</b> #@Model.MaTK</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="HoTen" class="form-label fw-bold">Họ tên</label>
+            <input asp-for="HoTen" class="form-control" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label asp-for="VaiTro" class="form-label fw-bold">Vai trò</label>
+            <select asp-for="VaiTro" class="form-select">
+                <option value="NhanVien">Nhân viên</option>
+                <option value="QuanTri">Quản trị</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Mật khẩu mới (để trống nếu không đổi)</label>
+            <input type="password" name="matKhauMoi" class="form-control" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-bold">Trạng thái</label>
+            <div class="form-check mt-2">
+                <input asp-for="TrangThai" class="form-check-input" />
+                <label class="form-check-label">Hoạt động</label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-warning">💾 Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">← Quay lại</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -1,0 +1,24 @@
+﻿@model QuanCafeWeb.Models.TaiKhoan
+@{ ViewData["Title"] = "Khóa nhân viên"; }
+
+<h2 class="mb-3 text-danger">🔒 Khóa tài khoản nhân viên</h2>
+
+<div class="alert alert-warning">
+    <p>Bạn có chắc muốn khóa tài khoản này?</p>
+    <p class="mb-0">Nhân viên sẽ không thể đăng nhập sau khi bị khóa.</p>
+</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <p><b>Mã:</b> #@Model.MaTK</p>
+        <p><b>Họ tên:</b> @Model.HoTen</p>
+        <p><b>Tên đăng nhập:</b> @Model.TenDangNhap</p>
+        <p><b>Vai trò:</b> @Model.VaiTro</p>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="MaTK" />
+    <button type="submit" class="btn btn-danger">🔒 Xác nhận khóa</button>
+    <a asp-action="Index" class="btn btn-secondary">← Quay lại</a>
+</form>

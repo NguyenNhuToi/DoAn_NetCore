@@ -1,0 +1,121 @@
+@model List<QuanCafeWeb.Models.CaLamViec>
+@{ ViewData["Title"] = "Ca làm việc"; }
+
+<h2 class="mb-3">⏰ Quản lý ca làm việc</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show">
+        ✅ @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show">
+        ⚠️ @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+    <div class="col-md-2">
+        <select name="maNV" class="form-select" asp-items="ViewBag.NhanViens">
+            <option value="">-- Nhân viên --</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Trạng thái --</option>
+            @if (ViewBag.TrangThai == "danglam")
+            {
+                <option value="danglam" selected>🟢 Đang làm</option>
+                <option value="daxong">✅ Đã xong</option>
+            }
+            else if (ViewBag.TrangThai == "daxong")
+            {
+                <option value="danglam">🟢 Đang làm</option>
+                <option value="daxong" selected>✅ Đã xong</option>
+            }
+            else
+            {
+                <option value="danglam">🟢 Đang làm</option>
+                <option value="daxong">✅ Đã xong</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="tuNgay" value="@ViewBag.TuNgay" class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="denNgay" value="@ViewBag.DenNgay" class="form-control" />
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary">🔍 Lọc</button>
+        <a asp-action="Index" class="btn btn-secondary">↺ Reset</a>
+        <a asp-action="CheckIn" class="btn btn-success">➕ Check-in</a>
+        <a asp-action="ThongKe" class="btn btn-info">📊 Thống kê</a>
+    </div>
+</form>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã ca</th>
+            <th>Nhân viên</th>
+            <th>Giờ vào</th>
+            <th>Giờ ra</th>
+            <th>Số giờ</th>
+            <th>Trạng thái</th>
+            <th width="200">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>#@item.MaCa</td>
+                <td>@item.TaiKhoan?.HoTen</td>
+                <td>@item.GioVao.ToString("dd/MM HH:mm")</td>
+                <td>@(item.GioRa?.ToString("dd/MM HH:mm") ?? "—")</td>
+                <td>
+                    @if (item.SoGioLam.HasValue)
+                    {
+<b>@item.SoGioLam.Value.ToString("0.0")</b> <span>h</span>
+                    }
+                    else
+                    {
+                        <span>—</span>
+                    }
+                </td>
+                <td>
+                    @if (item.GioRa == null)
+                    {
+                        <span class="badge bg-success">🟢 Đang làm</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">✅ Đã xong</span>
+                    }
+                </td>
+                <td>
+                    @if (item.GioRa == null)
+                    {
+                        <form asp-action="CheckOut" asp-route-id="@item.MaCa" method="post"
+                              style="display:inline"
+                              onsubmit="return confirm('Check-out cho nhân viên này?');">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger btn-sm">🚪 Check-out</button>
+                        </form>
+                    }
+                    <form asp-action="Xoa" asp-route-id="@item.MaCa" method="post"
+                          style="display:inline"
+                          onsubmit="return confirm('Xóa ca này?');">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-secondary btn-sm">🗑️ Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
